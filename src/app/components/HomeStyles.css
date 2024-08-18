@@ -1,0 +1,131 @@
+.home {
+  width: 100%;
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  /* border:3px #fff solid; */
+}
+.meterfore{
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%), url("/phone.png") ;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  /* transform: rotateZ(15deg); */
+  @media (min-width: 1300px) {
+    background-position: 50% calc(10vw);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 50%), url("/phone.png") ;
+  
+  }
+}
+h1.meter {
+  font-size:  25vw;
+  font-stretch: extra-expanded;
+  font-weight: 800;
+  background-size: cover;
+  margin-top: 10vh;
+  padding-bottom: 10px;
+  transform: scaleY(120%);
+  /* background: -webkit-linear-gradient(bottom, rgba(0,67,116,0) -26.48%, rgba(255,255,255,0.6) 73.52%); */
+  background: -webkit-linear-gradient(bottom, rgba(0,67,116,0) 30%, rgba(255,255,255,0.8) 70.52%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  background: radial-gradient(
+    circle at -3.1% -4.3%,
+    rgb(57, 255, 186) 0%,
+    rgb(21, 38, 82) 90%
+  );
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+h4{
+  position: absolute;
+  margin-top: 88vh !important;
+  color: #fff;
+}
+
+.home1 img{
+  height: 50px;
+  width: 100px;
+  border-bottom: 100px solid red;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+
+}
+.detail *{
+  background: transparent;
+}
+.bg{
+}
+.detailchild{
+  height: 105vh;
+}
+.detailchild:nth-child(odd){
+  background: linear-gradient(to right, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 80%), url("/2.png") !important;
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  align-items: center;
+  justify-content: flex-end;
+  h1{
+    text-align: end;
+  }
+}
+
+.detailchild:nth-child(even){
+    background: linear-gradient(to left, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 80%), url("/2.png") !important;
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    align-items: center;
+    justify-content: flex-start;
+  
+}
+.actionhome{
+  position: absolute !important;
+  margin-top: 35vh !important;
+}
+
+.bluebtn{
+  background-color: rgb(0, 89, 255);
+}
+.actionhome{
+flex-direction: column;
+}
+.container{
+margin-top: calc(25vw/3 + 5vh);
+}
+.scrollspec{
+  overflow-y:hidden;
+  height: 300px;
+  white-space: nowrap;
+
+}
+.scrollspec img{
+  display: inline-block;
+  border-radius: 10px;
+  margin: 0 3%;
+}
+.footer {
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* width: 100%; */
+    /* /* height: 2.5rem; */
+    }
