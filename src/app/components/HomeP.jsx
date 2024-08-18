@@ -1,14 +1,15 @@
 import "./HomeStyles.css";
 import Image from "next/image";
+import Script from 'next/script'
 
 function HomeP() {
   return (
     <>
   
-       <script src="/nav.js">
+       <Script src="/nav.js">
       
        
-         </script>
+         </Script>
   
       <div className="home">
         <div className="meterfore">
