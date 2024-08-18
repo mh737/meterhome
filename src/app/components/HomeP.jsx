@@ -5,11 +5,11 @@ import Script from 'next/script'
 function HomeP() {
   return (
     <>
-  
-       <Script src="/nav.js">
+  <script src="/nav.js" async />
+       {/* <Script src="/nav.js">
       
        
-         </Script>
+         </Script> */}
   
       <div className="home">
         <div className="meterfore">
