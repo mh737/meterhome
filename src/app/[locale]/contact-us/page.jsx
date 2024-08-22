@@ -40,3 +40,4 @@ function Contact() {
 }
 
 export default Contact
+export const runtime = 'experimental-edge';
