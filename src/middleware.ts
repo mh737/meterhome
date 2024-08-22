@@ -53,7 +53,7 @@ export default function middleware(req: NextRequest) {
   // Proceed with the next-intl middleware if the locale is already present
   return intlMiddleware(req);
 }
-
+export const runtime = 'edge';
 export const config = {
   // Match only internationalized pathnames
   matcher: ['/', '/(en|hk)/:path*'],
