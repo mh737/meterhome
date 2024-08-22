@@ -30,14 +30,14 @@ function HomeP() {
         <div className="detail w-screen ">
           <div className="detailchild  flex flex-wrap content-center">
             <h1 className="text-6xl mb-12 font-bold">Extra Security</h1>
-            <div className="scrollspec mt-5">
+            <div className="scrollspec mt-5 w-full md:w-[60vw]">
             <p>Your e-ID is stored on the Secure Element </p>
             <p>Your e-ID is stored on the Secure Element </p>
             </div>
           </div>
           <div className="detailchild flex flex-wrap content-center">
             <h1 className="text-6xl mb-12 font-bold">Low Cost</h1>
-            <div className="scrollspec mt-5">
+            <div className="scrollspec mt-5  w-full md:w-[60vw]">
               <p>Your e-ID is stored on the Secure Element </p>
               <p>Your e-ID is stored on the Secure Element </p>
               <p>Your e-ID is stored on the Secure Element </p>
@@ -47,7 +47,7 @@ function HomeP() {
       </div>
       <div className="home">
         <h1 className="text-6xl mb-12 font-bold text-white">USE CASE</h1>
-        <div className="scrollspec mt-5 max-[md]:w-full">
+        <div className="scrollspec mt-5 w-full md:w-[60vw]">
         <p>Your e-ID is stored on the Secure Element </p>
               <p>Your e-ID is stored on the Secure Element </p>
               <p>Your e-ID is stored on the Secure Element </p>
