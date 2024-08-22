@@ -21,11 +21,14 @@ body *:lang(zh){
   font-weight: 400;
   font-style: normal;
 }
-body *{
+body *, .en{
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+pre{
+  margin: 0;
 }
 /* 
 :root {

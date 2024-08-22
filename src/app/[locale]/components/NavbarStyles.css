@@ -88,12 +88,7 @@
 @tailwind components;
 @tailwind utilities;
 
-pre{
-    margin: 0;
-}
-/* h1{
-    color: #fff;
-} */
+
 .nav{
     
     display: flex;

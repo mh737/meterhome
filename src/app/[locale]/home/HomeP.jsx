@@ -15,7 +15,7 @@ function HomeP() {
         <div className="meterfore">
           <h1 className="meter">METER</h1>
 
-        </div>
+        </div> 
         <div className="flex-col flex align-middle flex-wrap">
           <h2 className="ml-auto mr-auto text-4xl text-white">{t("title")}</h2>
           <div className="flex justify-center align-middle">
