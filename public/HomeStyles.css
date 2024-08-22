@@ -93,7 +93,7 @@ h4 {
 .detailchild {
   height: 105vh;
   h1{
-    width: 100vw;
+    width: 100%;
   }
 }
 
