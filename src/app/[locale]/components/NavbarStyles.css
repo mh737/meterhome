@@ -146,7 +146,7 @@ h1{
 #navbar {
   position: fixed;
   transition: 0.5s;
-  width: 95%;
+  width: 100%;
   background: #000;
   z-index: 99 !important;
 }
