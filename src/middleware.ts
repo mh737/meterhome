@@ -22,7 +22,7 @@ import { locales } from './i18n';
 // Your existing createMiddleware setup
 const intlMiddleware = createMiddleware({
   locales,
-  defaultLocale: 'hk',
+  defaultLocale: 'zh',
 });
 
 export default function middleware(req: NextRequest) {
@@ -53,8 +53,8 @@ export default function middleware(req: NextRequest) {
   // Proceed with the next-intl middleware if the locale is already present
   return intlMiddleware(req);
 }
-export const runtime = 'experimental-edge';
+export const runtime = 'edge';
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(en|hk)/:path*'],
+  matcher: ['/', '/(en|zh)/:path*'],
 };
