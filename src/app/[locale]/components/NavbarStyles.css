@@ -99,6 +99,7 @@
     
 }
 .navleft{
+  justify-self : flex-start;
     display: flex !important;
     align-content: center;
     justify-content: center;
@@ -137,4 +138,8 @@
   width: 100%;
   background: #000;
   z-index: 99 !important;
+}
+
+.navright{
+  justify-self : flex-end;
 }
