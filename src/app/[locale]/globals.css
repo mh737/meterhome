@@ -14,6 +14,12 @@ body{
     font-style: normal;
     overflow-x: hidden;
 }
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
+body *:lang(zh){
+  font-family: "LXGW WenKai Mono TC", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
 body *{
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
