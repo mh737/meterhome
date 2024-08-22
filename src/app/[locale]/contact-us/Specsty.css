@@ -45,6 +45,11 @@ body {
    min-height: 100%;
    position: relative;
 }
+.prevent-select {
+   -webkit-user-select: none; /* Safari */
+   -ms-user-select: none; /* IE 10 and IE 11 */
+   user-select: none; /* Standard syntax */
+ }
 
 /* .get-in-touch {
    max-width: 650px;
@@ -98,8 +103,11 @@ body {
             transform: translateY(-24px);
          }
       }
-      &.not-empty {
-
+   }
+   .not-empty {
+      margin-top: 32px;
+      + .label {
+         transform: translateY(-24px);
       }
    }
    .label {

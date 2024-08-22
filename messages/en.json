@@ -21,12 +21,17 @@
     "title": "Not found!"
   },
   "NavPage": {
-    "contact": "Contact US",
+    "contact": "Contact us",
     "homepage": "Home",
     "change-lang-text": "中",
     "change-lang-locale": "zh"
   },
   "ContactPage": {
-    "title": "Get in Touch"
+    "title": "Get in Touch",
+    "name":"Your preferred name",
+    "email":"Your email",
+    "message":"Message to us",
+    "submit":"Submit",
+    "back":"Back to HomePage"
   }
 }

@@ -85,9 +85,10 @@ h4 {
 
 .container {
   margin-top: calc(25vw/3 + 10vh);
-  width: 100%;
 }
-
+.usecase{
+  background:  linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(/1.png) !important;
+}
 .detail * {
   background: transparent;
 }
@@ -145,13 +146,22 @@ h4 {
   overflow-y: hidden;
   height: 350px;
   white-space: nowrap;
+  overflow-wrap: break-word;
 
 }
 
 .scrollspec * {
+  white-space: warp !important;
+  overflow-wrap: break-word !important;
+  /* -moz-hyphens:auto;
+-ms-hyphens:auto;
+-webkit-hyphens:auto;
+hyphens:auto;
+word-wrap:break-word; */
+  font-size: 75px;
   display: inline-block;
   border-radius: 10px;
-  background: #FFF;
+  background: #FFFFFF66;
   height: 300px;
   width: 500px;
   margin: 0 3%;
@@ -160,9 +170,210 @@ h4 {
 
 
 
-.footer {
-  /* position: absolute; */
-  /* bottom: 0; */
-  /* width: 100%; */
-  /* /* height: 2.5rem; */
+
+
+
+
+.CSSgal {
+  position: relative;
+  overflow: hidden;
+  height: 100%; /* Or set a fixed height */
 }
+
+/* SLIDER */
+
+.CSSgal .slider {
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  transition: 0.8s;
+}
+
+/* SLIDES */
+
+.CSSgal .slider > * {
+  font-size: 1rem;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
+  background: none 50% no-repeat;
+  background-size: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+
+.CSSgal .prevNext {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+  height: 0;
+}
+
+.CSSgal .prevNext > div+div {
+  visibility: hidden; /* Hide all but first P/N container */
+}
+
+.CSSgal .prevNext a {
+  background: #fff;
+  position: absolute;
+  width:       60px;
+  height:      60px;
+  line-height: 60px; /* If you want to place numbers */
+  text-align: center;
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  /* -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); */
+  left: 0;
+}
+.CSSgal .prevNext a:hover {
+  opacity: 1;
+}
+.CSSgal .prevNext a+a {
+  left: auto;
+  right: 0;
+}
+
+/* NAVIGATION */
+
+.CSSgal .bullets {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+.CSSgal .bullets > a {
+  display: inline-block;
+  width:       30px;
+  height:      30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+.CSSgal .bullets > a+a {
+  background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+}
+.CSSgal .bullets > a:hover {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
+/* ACTIVE */
+#s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+#s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+#s3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
+#s4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* SLIDER ANIMATION POSITIONS */
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+/* More slides? Add here more rules */
+
+
+/* YOU'RE THE DESIGNER! 
+   ____________________
+   All above was mainly to get it working :)
+   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
+/* .CSSgal *{box-sizing: border-box; -webkit-box-sizing: border-box; } */
+.CSSgal{
+  /* background: #000; */
+  color: #fff;  
+  text-align: center;
+}
+.CSSgal .slider h2 {
+  padding: 80px 40px;
+  /* margin-top: 40vh; */
+  /* height: 100%; */
+  font-weight: 200;
+  letter-spacing: -0.06em;
+  word-spacing: 0.2em;
+  font-size: 3em;
+}
+.CSSgal a {
+  border-radius: 50%;
+  margin: 0 3px;
+  color: rgba(0,0,0,0.8);
+  text-decoration: none;
+}
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
+/* ACTIVE */
+#ss1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+#ss2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+#ss3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
+#ss4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#ss1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#ss2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#ss3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#ss4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* SLIDER ANIMATION POSITIONS */
+
+#ss1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#ss2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#ss3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#ss4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+/* More slides? Add here more rules */
+
+
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
+/* ACTIVE */
+#sss1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+#sss2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+#sss3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
+#sss4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#sss1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#sss2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#sss3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#sss4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* SLIDER ANIMATION POSITIONS */
+
+#sss1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#sss2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#sss3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#sss4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+/* More slides? Add here more rules */

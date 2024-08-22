@@ -22,8 +22,12 @@ export default async function LocaleLayout({
  
   return (
     <html lang={locale}>
-      <body>
+      <head>
         <link rel="icon" href="/meter.jpg" sizes="any" />
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+      </head>
+      <body>
+        
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
