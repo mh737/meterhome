@@ -101,7 +101,7 @@ h4 {
   background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 80%), url("/2.png") !important;
   /* Set a specific height */
   min-height: 500px;
-  width: 90vw;
+  width: 90%;
   /* Create the parallax scrolling effect */
   /* background-attachment: fixed; */
   background-position: center;
@@ -119,8 +119,8 @@ h4 {
   background: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 80%), url("/2.png") !important;
   /* Set a specific height */
   min-height: 500px;
-  margin-left: 10vw;
-  width: 90vw;
+  margin-left: 10%;
+  width: 90%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
