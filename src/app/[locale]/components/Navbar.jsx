@@ -62,7 +62,7 @@ function Navbar() {
                     </div>
                     <div className="navright max-md:hidden">
                     {/* <NavLink href="/" locale={t("change-lang-locale")}>{t("change-lang-text")}</NavLink> */}
-                    <NavLink onClick={changeLang(t("change-lang-locale"))} >{t("change-lang-text")}</NavLink>
+                    <button onClick={changeLang(t("change-lang-locale"))} >{t("change-lang-text")}</button>
                     {/* <NavLink href="/" locale="en">EN</NavLink> */}
                     </div>
                     <div className="navright md:hidden">
@@ -88,7 +88,7 @@ function Navbar() {
                         </div>
                         <div className="flex justify-end">
                             {/* <NavLink href="/" locale={t("change-lang-locale")} className="hover:bg-white hover:text-black text-white  p-3 m-2">{t("change-lang-text")}</NavLink> */}
-                            <NavLink onClick={changeLang(t("change-lang-locale"))} className="hover:bg-white hover:text-black text-white  p-3 m-2">{t("change-lang-text")}</NavLink>
+                            <button onClick={changeLang(t("change-lang-locale"))} className="hover:bg-white hover:text-black text-white  p-3 m-2">{t("change-lang-text")}</button>
                        
                         </div>
 
