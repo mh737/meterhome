@@ -65,7 +65,7 @@ h1.meter {
   -webkit-text-fill-color: transparent;
 
   @media (min-width: 1300px) {
-    margin-top: 12vh;
+    margin-top: 14vh;
     font-size: 300px;
     margin-bottom: -30px;
   }
