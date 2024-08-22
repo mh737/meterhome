@@ -67,7 +67,8 @@ h1.meter {
   @media (min-width: 1300px) {
     margin-top: 14vh;
     font-size: 300px;
-    margin-bottom: calc(-30px -2vh);
+    margin-bottom: calc(-2vh);
+    /* -30px */
   }
 }
 
