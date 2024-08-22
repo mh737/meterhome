@@ -47,7 +47,7 @@ function HomeP() {
       </div>
       <div className="home">
         <h1 className="text-6xl mb-12 font-bold text-white">USE CASE</h1>
-        <div className="scrollspec mt-5">
+        <div className="scrollspec mt-5 md:w-[100%]">
         <p>Your e-ID is stored on the Secure Element </p>
               <p>Your e-ID is stored on the Secure Element </p>
               <p>Your e-ID is stored on the Secure Element </p>
