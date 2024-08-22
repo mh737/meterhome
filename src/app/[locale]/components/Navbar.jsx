@@ -7,26 +7,26 @@ import { Link as NavLink } from "../../../navigation"
 import { useTranslations } from 'next-intl';
 // import twitterIcon from "../../public/meter.jpg";
 
-import {useRouter, usePathname} from '@/navigation';
-import {useParams} from 'next/navigation';
+// import {useRouter, usePathname} from '@/navigation';
+// import {useParams} from 'next/navigation';
 
 function Navbar() {
 
-    const router = useRouter();
-    const [isPending, startTransition] = useTransition();
-    const pathname = usePathname();
-    const params = useParams();
-    function changeLang (nextLocale){
-        startTransition(() => {
-            router.replace(
-              // @ts-expect-error -- TypeScript will validate that only known `params`
-              // are used in combination with a given `pathname`. Since the two will
-              // always match for the current route, we can skip runtime checks.
-              {pathname, params},
-              {locale: nextLocale}
-            );
-        });
-    }
+    // const router = useRouter();
+    // const [isPending, startTransition] = useTransition();
+    // const pathname = usePathname();
+    // const params = useParams();
+    // function changeLang (nextLocale){
+    //     startTransition(() => {
+    //         router.replace(
+    //           // @ts-expect-error -- TypeScript will validate that only known `params`
+    //           // are used in combination with a given `pathname`. Since the two will
+    //           // always match for the current route, we can skip runtime checks.
+    //           {pathname, params},
+    //           {locale: nextLocale}
+    //         );
+    //     });
+    // }
 
 
 
