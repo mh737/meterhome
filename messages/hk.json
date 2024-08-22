@@ -1,0 +1,21 @@
+{
+    "HomePage": {
+      "title": "超寬頻電子身份驗證系統",
+      "how-to-use": "示範和體驗",
+      "select-plan": "我有興趣",
+      "scroll-down": "向下滑動以了解更多"
+    },
+    "NotFoundPage": {
+      "title": "搵唔到! 404 "
+    },
+    "NavPage":{
+      "homepage": "回到主頁",
+      "contact": "聯絡我們",
+      "change-lang-text":"EN",
+      "change-lang-locale":"en"
+  
+    },
+    "ContactPage": {
+      "title": "很高興您對我們的產品感興趣，請留下您的聯絡方式，以便我們跟進"
+    }
+  }

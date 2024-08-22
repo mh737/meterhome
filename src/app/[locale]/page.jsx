@@ -1,18 +1,17 @@
 
 
 
-import Image from "next/image";
-import Navbar from "./components/Navbar";
-import HomeP from "./components/HomeP.jsx";
-import Spec from "./components/Spec.jsx"
 
+import Navbar from "./components/Navbar";
+import HomeP from "./home/HomeP.jsx";
 
 export default function Home() {
+
   return (
-    <div className="App">
+    <div className="">
+      
       <Navbar></Navbar>
       <HomeP />
-      <Spec/>
     </div>
   );
 }

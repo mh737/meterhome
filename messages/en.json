@@ -1,0 +1,21 @@
+{
+  "HomePage": {
+    "title": "Ultra-Wide Band eID Vaildation System",
+    "how-to-use": "Demo",
+    "select-plan": "Interested!",
+      "scroll-down": "Scroll and Learn More"
+  },
+  "NotFoundPage": {
+    "title": "Not found!"
+  },
+  "NavPage":{
+    "contact": "Contact US",
+    "homepage": "Home",
+    "change-lang-text":"中",
+    "change-lang-locale":"hk"
+
+  },
+  "ContactPage": {
+    "title": "Get in Touch"
+  }
+}
