@@ -13,7 +13,7 @@ function HomeP() {
 
       <div className="home ">
         <div className="meterfore md:mt-[10vh]">
-          <h1 className="meter w-[100vw] md:w-fit text-center">METER</h1>
+          <h1 className="meter w-[100vw] md:w-fit text-center en">METER</h1>
 
         </div> 
         <div className="flex-col flex align-middle flex-wrap">
