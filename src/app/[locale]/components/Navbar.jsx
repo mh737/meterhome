@@ -62,12 +62,12 @@ function Navbar() {
                         <NavLink href="/">{t("homepage")}</NavLink>
                         <NavLink href="/contact-us">{t("contact")}</NavLink>
                     </div>
-                    <div className="navright hidden md:visible">
+                    <div className="navright max-md:hidden">
                         <NavLink href="/" locale={t("change-lang-locale")} className="en">{t("change-lang-text")}</NavLink>
                         {/* <button onClick={changeLang(t("change-lang-locale"))} >{t("change-lang-text")}</button> */}
                         {/* <NavLink href="/" locale="en">EN</NavLink> */}
                     </div>
-                    <div className="navright visible md:hidden w-[166px] !flex justify-end">
+                    <div className="navright md:hidden">
                         <button onClick={toggleNavbar}>
                             {!isClick ? (<svg width="80px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20 7L4 7" stroke="#FFF" stroke-width="1.5" stroke-linecap="round" />
