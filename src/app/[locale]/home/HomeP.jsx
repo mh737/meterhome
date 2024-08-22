@@ -17,7 +17,7 @@ function HomeP() {
 
         </div> 
         <div className="flex-col flex align-middle flex-wrap">
-          <h2 className="ml-auto mr-auto text-4xl text-white">{t("title")}</h2>
+          <h2 className="ml-auto mr-auto text-4xl text-white text-center">{t("title")}</h2>
           <div className="flex justify-center align-middle">
             <a href="" className="m-2 p-2 border-2 bg-black text-white hover:bg-white hover:text-black transition-all" >{t("how-to-use")}</a>
             <a href="" className="m-2 p-3 bg-blue-800 text-white hover:bg-blue-500 transition-all">{t("select-plan")}</a>
