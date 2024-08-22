@@ -12,7 +12,7 @@ function HomeP() {
       {/* <Script src="/nav.js"></Script> */}
 
       <div className="home ">
-        <div className="meterfore">
+        <div className="meterfore md:mt-[10vh]">
           <h1 className="meter w-[100vw] md:w-fit text-center">METER</h1>
 
         </div> 
