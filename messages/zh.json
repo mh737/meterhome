@@ -12,7 +12,7 @@
       "homepage": "回到主頁",
       "contact": "聯絡我們",
       "change-lang-text":"EN",
-      "change-lang-locale":"en"
+      "change-lang-locale":"en/:path"
   
     },
     "ContactPage": {

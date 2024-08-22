@@ -12,7 +12,7 @@
     "contact": "Contact US",
     "homepage": "Home",
     "change-lang-text":"中",
-    "change-lang-locale":"zh"
+    "change-lang-locale":"zh/:path"
 
   },
   "ContactPage": {

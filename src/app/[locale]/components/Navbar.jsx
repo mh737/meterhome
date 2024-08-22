@@ -7,7 +7,29 @@ import { Link as NavLink } from "../../../navigation"
 import { useTranslations } from 'next-intl';
 // import twitterIcon from "../../public/meter.jpg";
 
+import {useRouter, usePathname} from '@/navigation';
+import {useParams} from 'next/navigation';
+
 function Navbar() {
+
+    const router = useRouter();
+    const [isPending, startTransition] = useTransition();
+    const pathname = usePathname();
+    const params = useParams();
+    const changeLang = (nextLocale)=>{
+        startTransition(() => {
+            router.replace(
+              // @ts-expect-error -- TypeScript will validate that only known `params`
+              // are used in combination with a given `pathname`. Since the two will
+              // always match for the current route, we can skip runtime checks.
+              {pathname, params},
+              {locale: nextLocale}
+            );
+        });
+    }
+
+
+
     const [isClick, isSetClick] = useState(false);
 
     const toggleNavbar = () => {
@@ -39,7 +61,8 @@ function Navbar() {
                         <NavLink href="/contact-us">{t("contact")}</NavLink>
                     </div>
                     <div className="navright max-md:hidden">
-                    <NavLink href="/" locale={t("change-lang-locale")}>{t("change-lang-text")}</NavLink>
+                    {/* <NavLink href="/" locale={t("change-lang-locale")}>{t("change-lang-text")}</NavLink> */}
+                    <NavLink onClick={changeLang(t("change-lang-locale"))} >{t("change-lang-text")}</NavLink>
                     {/* <NavLink href="/" locale="en">EN</NavLink> */}
                     </div>
                     <div className="navright md:hidden">
@@ -64,7 +87,9 @@ function Navbar() {
                             <NavLink href="/contact-us" className="block hover:bg-white hover:text-black text-white p-3">{t("contact")}</NavLink>
                         </div>
                         <div className="flex justify-end">
-                            <NavLink href="/" locale={t("change-lang-locale")} className="hover:bg-white hover:text-black text-white  p-3 m-2">{t("change-lang-text")}</NavLink>
+                            {/* <NavLink href="/" locale={t("change-lang-locale")} className="hover:bg-white hover:text-black text-white  p-3 m-2">{t("change-lang-text")}</NavLink> */}
+                            <NavLink onClick={changeLang(t("change-lang-locale"))} className="hover:bg-white hover:text-black text-white  p-3 m-2">{t("change-lang-text")}</NavLink>
+                       
                         </div>
 
                     </>
