@@ -16,7 +16,7 @@ function Navbar() {
     const [isPending, startTransition] = useTransition();
     const pathname = usePathname();
     const params = useParams();
-    const changeLang = (nextLocale)=>{
+    function changeLang (nextLocale){
         startTransition(() => {
             router.replace(
               // @ts-expect-error -- TypeScript will validate that only known `params`
