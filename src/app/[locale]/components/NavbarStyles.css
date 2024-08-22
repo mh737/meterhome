@@ -141,5 +141,5 @@
 }
 
 .navright{
-  justify-self : flex-end;
+  width: 160px;
 }
