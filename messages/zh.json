@@ -3,7 +3,19 @@
       "title": "超寬頻電子身份驗證系統",
       "how-to-use": "示範和體驗",
       "select-plan": "我有興趣",
-      "scroll-down": "向下滑動以了解更多"
+      "scroll-down": "向下滑動以了解更多",    
+      "extra-security": "額外安全保護",
+      "extra-security-1": "您的 elD 儲存在您手機的安全元件上。",
+      "extra-security-2": "採用超寬頻技術建立即時測距，具有防篡改保護。",
+      "extra-security-3": "您手機上的「遺失模式」會立即保護您的身分。",
+      "low-cost": "低成本",
+      "low-cost-1": "不再需要支付實體身分證的費用。",
+      "low-cost-2": "告別固定的卡片管理成本。在平台上分發和禁用 ELD。",
+      "use-case": "適用於：",
+      "use-case-1": "工作場所入口",
+      "use-case-2": "自助式",
+      "use-case-3": "學校出席",
+      "use-case-4": "停車聯絡表 "
     },
     "NotFoundPage": {
       "title": "搵唔到! 404 "

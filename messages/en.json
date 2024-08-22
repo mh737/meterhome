@@ -3,17 +3,28 @@
     "title": "Ultra-Wide Band eID Vaildation System",
     "how-to-use": "Demo",
     "select-plan": "Interested!",
-      "scroll-down": "Scroll and Learn More"
+    "scroll-down": "Scroll and Learn More",
+    "extra-security": "Extra Security Protection",
+    "extra-security-1": "Your elD is stored on the Secure Element of your phone.",
+    "extra-security-2": "Ultra-Wide Band technology is used to establish a real-time ranging with tamper-resistant protection. ",
+    "extra-security-3": "The \"Lost Mode\" on your phone immediately protects your identity. ",
+    "low-cost": "Low Cost",
+    "low-cost-1": "No more cost for a solid identity card. ",
+    "low-cost-2": "Say bye to solid card management cost. Distribute and disable elDs on the platform. ",
+    "use-case": "Applicable at: ",
+    "use-case-1": "Workplace entrance",
+    "use-case-2": "Self-service",
+    "use-case-3": "School attendance",
+    "use-case-4": "Parking Contact form "
   },
   "NotFoundPage": {
     "title": "Not found!"
   },
-  "NavPage":{
+  "NavPage": {
     "contact": "Contact US",
     "homepage": "Home",
-    "change-lang-text":"中",
-    "change-lang-locale":"zh"
-
+    "change-lang-text": "中",
+    "change-lang-locale": "zh"
   },
   "ContactPage": {
     "title": "Get in Touch"

@@ -29,29 +29,29 @@ function HomeP() {
       <div className="container w-screen">
         <div className="detail w-screen ">
           <div className="detailchild  flex flex-wrap content-center">
-            <h1 className="text-6xl mb-12 font-bold">Extra Security</h1>
+            <h1 className="text-6xl mb-12 font-bold">{t("low-cost")}</h1>
             <div className="scrollspec mt-5 w-full md:w-[60vw]">
-            <p>Your e-ID is stored on the Secure Element </p>
-            <p>Your e-ID is stored on the Secure Element </p>
+            <p>{t("low-cost-1")} </p>
+            <p>{t("low-cost-2")} </p>
             </div>
           </div>
           <div className="detailchild flex flex-wrap content-center">
-            <h1 className="text-6xl mb-12 font-bold">Low Cost</h1>
+            <h1 className="text-6xl mb-12 font-bold">{t("extra-security")}</h1>
             <div className="scrollspec mt-5  w-full md:w-[60vw]">
-              <p>Your e-ID is stored on the Secure Element </p>
-              <p>Your e-ID is stored on the Secure Element </p>
-              <p>Your e-ID is stored on the Secure Element </p>
+              <p>{t("extra-security-1")} </p>
+              <p>{t("extra-security-2")} </p>
+              <p>{t("extra-security-3")} </p>
             </div>
           </div>
         </div>
       </div>
       <div className="home">
-        <h1 className="text-6xl mb-12 font-bold text-white">USE CASE</h1>
+        <h1 className="text-6xl mb-12 font-bold text-white">{t("use-case")}</h1>
         <div className="scrollspec mt-5 w-full md:w-[60vw]">
-        <p>Your e-ID is stored on the Secure Element </p>
-              <p>Your e-ID is stored on the Secure Element </p>
-              <p>Your e-ID is stored on the Secure Element </p>
-              <p>Your e-ID is stored on the Secure Element </p>
+              <p>{t("use-case-1")} </p>
+              <p>{t("use-case-2")} </p>
+              <p>{t("use-case-3")} </p>
+              <p>{t("use-case-4")}</p>
         </div>
       </div>
 
