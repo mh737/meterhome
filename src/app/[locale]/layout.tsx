@@ -24,7 +24,19 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <head>
         <link rel="icon" href="/meter.jpg" sizes="any" />
-        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        {/* <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> */}
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
+        <script>
+        {/* window.onloadTurnstileCallback = function () {
+            turnstile.render('#example-container', {
+                sitekey: '0x4AAAAAAAh2iM15h5SbEeRF',
+                callback: function(token) {
+                    console.log(`Challenge Success ${token}`);
+                },
+            });
+        }; */}
+        </script>
       </head>
       <body>
         

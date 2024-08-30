@@ -30,8 +30,6 @@ function Navbar() {
     //     });
     // }
 
-
-
     const [isClick, isSetClick] = useState(false);
 
     const toggleNavbar = () => {
@@ -41,9 +39,9 @@ function Navbar() {
 
     return (
         <>
-            <div id="navbar">
+            <nav id="navbar">
                 <div className="nav">
-                    <NavLink href="/">
+                    <NavLink href="/" className="!p-0 ">
                         <div className="navleft">
 
                             <Image
@@ -53,7 +51,7 @@ function Navbar() {
                                 height={47}
                                 alt="METER logo"
                             />
-                            <pre className="!hover:no-underline">METER</pre>
+                            <pre >METER</pre>
 
                         </div>
                     </NavLink>
@@ -61,33 +59,35 @@ function Navbar() {
                         {/* <a href="/plan" className="">Plan</a>
                 <a href="tutorial">tutorial</a>
                 <a href="/support">Supported device</a> */}
-                        <NavLink href="/">{t("homepage")}</NavLink>
-                        <NavLink href="/contact-us">{t("contact")}</NavLink>
+                        <NavLink href="/" className="link">{t("homepage")}</NavLink>
+                        <NavLink href="/contact-us" className="link">{t("contact")}</NavLink>
                     </div>
-                    <div className="navright max-md:hidden">
-                        <NavLink href="/" locale={t("change-lang-locale")} className="en">{t("change-lang-text")}</NavLink>
+                    <div className=" max-md:hidden">
+                        <NavLink href="/" locale={t("change-lang-locale")} className="en link" >{t("change-lang-text")}</NavLink>
                         {/* <button onClick={changeLang(t("change-lang-locale"))} >{t("change-lang-text")}</button> */}
                         {/* <NavLink href="/" locale="en">EN</NavLink> */}
                     </div>
-                    <div className="navright md:hidden">
+                    <div className="flex md:hidden">
                         <button onClick={toggleNavbar}>
                             {!isClick ? (
                                 <Image
                                     src={ham}
-                                    width={80}
-                                    height={80}
+                                    width={47}
+                                    height={47}
                                     alt="menu"
 
                                 ></Image>
+                               
                             ) : (
                                 <Image
                                     src={cross}
-                                    width={80}
-                                    height={80}
+                                    width={47}
+                                    height={47}
                                     alt="menu"
 
                                 ></Image>
                             )}
+                             <NavLink href="/contact-us" className="rounded-2xl m-2 p-1 !pl-2 !pr-2 !bg-blue-800 text-white hover:!bg-blue-500 transition-all inline-block">{t("contact")}</NavLink>
                         </button>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ function Navbar() {
                     </>
                     )}
                 </div>
-            </div>
+            </nav>
 
         </>
     );
