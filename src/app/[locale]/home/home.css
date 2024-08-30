@@ -20,6 +20,27 @@
     }
 }
 
+
+
+.section-technology .speakers-container .video-wrapper {
+    --p-width: 1798px;
+    --p-height: 1012px;
+    justify-self: center;
+    width: 100%;
+    max-width: var(--p-width);
+}@media only screen and (max-width: 1068px) {
+    .section-technology .speakers-container .video-wrapper {
+        --p-width: 1068px;
+        --p-height: 602px;
+    }
+}@media only screen and (max-width: 734px) {
+    .section-technology .speakers-container .video-wrapper {
+        --p-width: 734px;
+        --p-height: 414px;
+    }
+}
+
+
 .smallpic {
     display: block;
     --p-width: 1026px;
@@ -119,6 +140,7 @@
 
 
 .reduced-headline {
+    margin: 0 5%;
     font-size: 32px;
     line-height: 1.125;
     font-weight: 700;
