@@ -23,7 +23,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
-        <link rel="icon" href="/meter.jpg" sizes="any" />
+        <link rel="icon" href="/image/meter.jpg" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         {/* <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> */}
         <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>

@@ -8,11 +8,11 @@ import HomeP from "./home/HomeP.jsx";
 export default function Home() {
 
   return (
-    <div className="">
+    <>
       
       <Navbar></Navbar>
       <HomeP />
-    </div>
+    </>
   );
 }
 {

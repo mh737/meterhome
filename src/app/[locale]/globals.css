@@ -3,17 +3,22 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+html{
+  quotes: "“" "”";
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
 body{
-    background: black;
+    background: #111;
     color: white;
     width: 100%;
     height: 100%;
     margin: 0;
-    font-family: "Inter", sans-serif;
+    /* font-family: "Inter", sans-serif; */
     font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    overflow-x: hidden;
+    /* font-weight: 500; */
+    /* font-style: normal; */
+    /* overflow-x: hidden; */
 }
 @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
 body *:lang(zh){
@@ -35,7 +40,7 @@ body *{
 pre{
   margin: 0;
 }
-/* 
+/*
 :root {
   --foreground-rgb:255, 255, 255;
   --background-start-rgb: 214, 219, 220;
@@ -65,3 +70,29 @@ body {
     text-wrap: balance;
   }
 } */
+
+/* :root {
+  --r-localnav-height: calc(52px* var(--r-localnav-text-zoom-factor));
+  --r-localnav-stacked-height: calc(66px* var(--r-localnav-text-zoom-factor));
+  --r-localnav-gn-height: calc(var(--r-globalnav-height, 44px)* var(--r-localnav-text-zoom-factor));
+  --r-localnav-viewport-large-min-width: viewport-get-property-for("ac-localnav:large", min-width);
+  --r-localnav-viewport-large-query: min-width(1024px);
+  --r-localnav-viewport-medium-min-width: viewport-get-property-for("ac-localnav:medium", min-width);
+  --r-localnav-viewport-medium-max-width: viewport-get-property-for("ac-localnav:medium", max-width);
+  --r-localnav-viewport-medium-query: min-width(834px);
+  --r-localnav-viewport-small-min-width: viewport-get-property-for("ac-localnav:small", min-width);
+  --r-localnav-viewport-small-max-width: viewport-get-property-for("ac-localnav:small", max-width);
+  --r-localnav-viewport-small-query: min-width(320px);
+  --r-localnav-text-zoom-factor: 1;
+}
+html:not(.aos) {
+  --global-nav-collective-height: calc(var(--r-globalnav-height) + var(--global-nav-ad-bar-height));
+}
+@media (max-width: 833px) {
+  :root {
+      --r-localnav-height: calc(48px* var(--r-localnav-text-zoom-factor));
+      --r-localnav-stacked-height: calc(63px* var(--r-localnav-text-zoom-factor));
+      --r-localnav-gn-height: calc(var(--r-globalnav-height, 48px)* var(--r-localnav-text-zoom-factor));
+  }
+} */
+

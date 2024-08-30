@@ -9,8 +9,8 @@ import { useTranslations } from 'next-intl';
 
 // import {useRouter, usePathname} from '@/navigation';
 // import {useParams} from 'next/navigation';
-import ham from "../../../../public/hamburger.svg";
-import cross from "../../../../public/cross.svg";
+import ham from "../../../../public/svg/hamburger.svg";
+import cross from "../../../../public/svg/cross.svg";
 
 function Navbar() {
 
@@ -46,7 +46,7 @@ function Navbar() {
 
                             <Image
                                 priority
-                                src="/meter.jpg"
+                                src="/image/meter.jpg"
                                 width={47}
                                 height={47}
                                 alt="METER logo"
