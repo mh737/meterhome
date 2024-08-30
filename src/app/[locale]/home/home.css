@@ -26,6 +26,7 @@
     --p-height: 508px;
     width: var(--p-width) !important;
     height: var(--p-height) !important;
+    margin-bottom: 60px;
 }
 
 @media screen and (max-width: 1068px) {

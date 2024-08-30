@@ -4,7 +4,8 @@ import "./home.css"
 import Image from "next/image";
 import { Link as NavLink } from "../../../navigation"
 
-import Image1 from "../../../../public/image/2.png";
+import Image1 from "../../../../public/image/2.jpg";
+import Image2 from "../../../../public/image/1.jpg";
 
 function HomeP() {
   const t = useTranslations('HomePage');
@@ -25,8 +26,9 @@ function HomeP() {
         
       </div>
       <div className="unitwrapper spacer-top !flex-nowrap">
-        <p className="eyebrow block">Feature</p>
+        <h2 className="eyebrow block">Feature</h2>
         <p className="headline block"> Low cost</p>
+        <p className="section-body spacer-bottom">by using our UWB secure module, your identification will automatically verify with the terminal</p>
         <Image
           src={Image1}
           alt="Vercel Logo"
@@ -41,8 +43,11 @@ function HomeP() {
           className="smallpic"
           priority
         />
+         <p className="reduced-headline">{t("low-cost-2")}</p>
+        <p className="section-body spacer-bottom">by using our UWB secure module, your identification will automatically verify with the terminal</p>
+        
         <Image
-          src={Image1}
+          src={Image2}
           alt="Vercel Logo"
           className="largepic"
           priority
