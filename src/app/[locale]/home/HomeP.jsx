@@ -7,9 +7,17 @@ import "./home.css";
 import Image from "next/image";
 import { Link as NavLink } from "../../../navigation";
 
-import Image1 from "../../../../public/image/2.jpg";
-import Image2 from "../../../../public/image/1.jpg";
-import Image3 from "../../../../public/image/3.jpg";
+import Image1 from "../../../../public/image/Demo2/1.png"
+import Image2 from "../../../../public/image/Demo2/2.png"
+import Image3 from "../../../../public/image/Demo2/3.png"
+import Image4 from "../../../../public/image/Demo2/4.png"
+import Image5 from "../../../../public/image/Demo2/5.png"
+import Image6 from "../../../../public/image/Demo2/6.png"
+import Image7 from "../../../../public/image/Demo2/7.png"
+import Image8 from "../../../../public/image/Demo2/8.png"
+import Image9 from "../../../../public/image/Demo2/9.png"
+import Image10 from "../../../../public/image/Demo2/10.jpg"
+
 
 function HomeP() {
   const t = useTranslations("HomePage");
@@ -22,118 +30,130 @@ function HomeP() {
   return (
     <>
       <script src="/nav.js" async />
-      <div className="unitwrapper !h-[calc(100vh-48px)] md:!h-[calc(100vh-57px)] bg-zinc-300">
-        <h1 className="absolute bottom-[7%] !z-20 bg-slate-950">new</h1>
-        <div className="frontpic absolute bottom-0 z-10">
-          <Image
-            src={Image3}
-            alt="Vercel Logo"
-            className="section-hero"
-            priority
-          />
-        </div>
+      <div className="w-full md:text-center items-center md:wrap md:flex flex-col">
+        <div className="ml-5 !z-10 !relative max-h-[348px]">
+        <h1 className="text-7xl mb-4 mt-4">Ultra-Wide Band eID Validation System</h1>
+        <button className="p-2 border-amber-50 border-2 bg-black">Demostration</button>
       </div>
-
+      <Image
+        src={Image1}
+        alt="Vercel Logo"
+        className="large-pic !relative mt-[-120px] !z-0"
+        priority
+      />
+      <div className="w-[70%] flex ml-auto mr-auto justify-between en mt-[-50px] z-10 !relative xl:w-[50%] md:mt-[-100px]">
+        <div className="text-2xl">METER portal</div>
+        <div className="text-2xl">Your device</div>
+      </div>
+      </div>
+      
+  
       <div className="unitwrapper spacer-top !flex-nowrap">
         <h2 className="eyebrow block">Feature</h2>
         <p className="headline block"> Low cost</p>
-        <p className=" spacer-bottom section-content">
-          <div className="w-[100%] md:w-[90%] section-body text-center ml-auto mr-auto">
-            by using our UWB secure module, your identification will
-            automatically verify with the terminal
-          </div>
-        </p>
-        <Image src={Image1} alt="Vercel Logo" className="smallpic" priority />
         <div className="section-content text-center">
-          <p className="reduced-headline">{t("low-cost-1")}</p>
+          <p className="reduced-headline">Revolutionary eID system</p>
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
-            by using our UWB secure module, your identification will
-            automatically verify with the terminal
+            Through METER portal, you can instantly issue and revoke eID, anywhere, anytime.
+          </p>
+        </div>
+        <div className="w-[200%] md:w-full overflow-hidden">
+          <Image src={Image2} alt="Vercel Logo" className="w-[50%] inline-block" priority />
+          <Image src={Image3} alt="Vercel Logo" className="w-[50%] inline-block" priority />
+
+        </div>
+        <div className="section-content text-center">
+          <p className="reduced-headline">True contactless expreience</p>
+          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
+            The anchor automatically connects to your device. <br /> Approach it to free your hands
           </p>
         </div>
 
-        <Image src={Image1} alt="Vercel Logo" className="smallpic " priority />
+        <div className="speakers-container">
+          <Image src={Image4} alt="Vercel Logo" className="largepic" priority />
+        </div>
+        <p className="headline block">{t("extra-security")}</p>
+
         <div className="section-content text-center">
-          <p className="reduced-headline">{t("low-cost-1")}</p>
+          <p className="reduced-headline"> Your e-ID is stored on the Secure Element on your phone</p>
+
+          <Image src={Image5} alt="Vercel Logo" className="h-[200px] mr-auto ml-auto w-[200px]" priority />
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
-            by using our UWB secure module, your identification will
-            automatically verify with the terminal
+            Ultra-Wide Band technology (UWB) enables real-time ranging to provide tamper-resistant protection
           </p>
         </div>
         <div className="speakers-container">
-          <Image src={Image2} alt="Vercel Logo" className="largepic" priority />
+          <Image src={Image6} alt="Vercel Logo" className="largepic" priority />
         </div>
-        <div className="section-content text-center">
-          <p className="reduced-headline">{t("low-cost-1")}</p>
-          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
-            by using our UWB secure module, your identification will
-            automatically verify with the terminal
-          </p>
-        </div>
-        <p className="headline block">{t("extra-security")}</p>
-        <p className="section-body spacer-bottom section-content">
-          <div className="w-[100%] md:w-[90%] section-body text-center ml-auto mr-auto">
-            by using our UWB secure module, your identification will
-            automatically verify with the terminal
+        <div className="w-full md:block flex wrap flex-col items-center">
+          <Image src={Image7} alt="Vercel Logo" className="md:w-[50%] w-[70%] inline-block" priority />
+          <div className="section-content text-center md:!w-[50%] !inline-block">
+            <p className="reduced-headline">Lost mode</p>
+            <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
+              The 'Lost Mode' on your phone immediately protects your identity
+            </p>
           </div>
-        </p>
-        <Image src={Image1} alt="Vercel Logo" className="smallpic" priority />
-        <div className="section-content text-center">
-          <p className="reduced-headline">{t("low-cost-1")}</p>
-          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
-            by using our UWB secure module, your identification will
-            automatically verify with the terminal
-          </p>
         </div>
-        <Image src={Image1} alt="Vercel Logo" className="smallpic" priority />
-        <div className="section-content text-center">
-          <p className="reduced-headline">{t("low-cost-1")}</p>
-          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
-            by using our UWB secure module, your identification will
-            automatically verify with the terminal
-          </p>
-        </div>
-        <Image src={Image1} alt="Vercel Logo" className="smallpic" priority />
-        <div className="section-content text-center">
-          <p className="reduced-headline">{t("low-cost-1")}</p>
-          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
-            by using our UWB secure module, your identification will
-            automatically verify with the terminal
-          </p>
-        </div>
-        <Image src={Image1} alt="Vercel Logo" className="smallpic" priority />
-        <div className="section-content text-center">
-          <p className="reduced-headline">{t("low-cost-1")}</p>
-          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
-            by using our UWB secure module, your identification will
-            automatically verify with the terminal
-          </p>
-        </div>
+
       </div>
       <div className="unitwrapper spacer-top !flex-nowrap !bg-slate-100 !text-slate-950">
         <h2 className="eyebrow block">Use Case</h2>
-        <p className="headline block">Applicate at</p>
-        <p className="section-body spacer-bottom section-content">
-          <div className="w-[100%] md:w-[90%] section-body text-center ml-auto mr-auto">
-            by using our UWB secure module, your identification will
-            automatically verify with the terminal
-          </div>
-        </p>
-        <Image src={Image1} alt="Vercel Logo" className="smallpic" priority />
-        <div className="section-content text-center">
-          <p className="reduced-headline">{t("low-cost-1")}</p>
-          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
-            by using our UWB secure module, your identification will
-            automatically verify with the terminal
+        <p className="headline block">Application</p>
+        <div className="flex flex-wrap w-full md:!w-[80%]">
+          <Image src={Image8} alt="Vercel Logo" className="basis-[50%] " priority />
+          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
+            Parking entrance and exit. No more annoying stopping.<br /><br />
+            <button className="p-3 bg-orange-500 rounded-full font-thin"> <div className="rounded-full border-white border-2 inline-block w-8 text-white">→</div> Learn more about <div className="font-bold inline-block hover:text-white ">Parking</div></button>
+            {/* <button className="p-3 bg-orange-500  rounded-full hover:text-white">→ Learn more about <b>Parking</b></button> */}
+          </p>
+
+          <Image src={Image9} alt="Vercel Logo" className="basis-[50%] " priority />
+          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
+            Access control at different types of properties. You can share a one-time pass with your guest<br /><br />
+            <button className="p-3 bg-orange-500 rounded-full font-thin"> <div className="rounded-full border-white border-2 inline-block w-8 text-white">→</div> Learn more about <div className="font-bold inline-block hover:text-white ">Access control</div></button>
+            {/* <button className="p-3 bg-orange-500  rounded-full hover:text-white">→ Learn more about <b>Access control</b></button> */}
+          </p>
+          <Image src={Image10} alt="Vercel Logo" className="basis-[50%] " priority />
+          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
+            Integrated into self-service kiosk. You can now truly focus on your work <br /><br />
+            <button className="p-3 bg-orange-500 rounded-full font-thin"> <div className="rounded-full border-white border-2 inline-block w-8 text-white">→</div> Learn more about <div className="font-bold inline-block hover:text-white ">Self-service</div></button>
           </p>
         </div>
-        <Image src={Image1} alt="Vercel Logo" className="smallpic" priority />
-        <div className="section-content text-center">
-          <p className="reduced-headline">{t("low-cost-1")}</p>
-          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
-            by using our UWB secure module, your identification will
-            automatically verify with the terminal
-          </p>
+      </div>
+      <div className=" !bg-slate-950 !text-slate-100">
+        
+        <div className="w-full md:w-[90%] flex ml-auto mr-auto mt-32 ">
+          <div className="w-[50%]">
+          <div className="text-slate-300">Contact</div>
+              <ul>
+                <NavLink href="/"><li className="text-2xl">Find US</li></NavLink>
+                <NavLink href="/"><li className="text-2xl">General Enquiry</li></NavLink>
+                <NavLink href="/"><li className="text-2xl">Feedback</li></NavLink>
+                <NavLink href="/"><li className="text-2xl">Request a Test Ride</li></NavLink>
+              </ul>
+          </div>
+          <div className="w-[50%]">
+              <div className="text-slate-300">Explore METER</div>
+              <ul>
+                <NavLink href="/"><li className="text-2xl">METER HK Offcial Online Store</li></NavLink>
+                <NavLink href="/"><li className="text-2xl">Subscribe to our newsletter</li></NavLink>
+                <NavLink href="/"><li className="text-2xl">METERLIMITED.com</li></NavLink>
+              </ul>
+          </div>
+        </div>
+        <div className="w-full md:w-[90%] flex ml-auto mr-auto mt-32 mb-32">
+        <div className="w-[50%]">
+        <ul>
+                <NavLink href="/"><li className="text-2xl inline-block mr-3">FB</li></NavLink>
+                <NavLink href="/"><li className="text-2xl inline-block">IG</li></NavLink>
+              </ul>
+        </div>
+        <div className="w-[50%]">
+        <ul className="text-end">
+                <NavLink href="/"><li className="text-2xl inline-block mr-3">English</li></NavLink>
+                <NavLink href="/"><li className="text-2xl inline-block">Chinese</li></NavLink>
+              </ul>
+        </div>
         </div>
       </div>
     </>
@@ -141,3 +161,15 @@ function HomeP() {
 }
 
 export default HomeP;
+
+
+{/* <video width="320" height="240" controls preload="none">
+<source src="/image/Demo2/ani1.MP4" type="video/mp4" />
+<track
+  src="/path/to/captions.vtt"
+  kind="subtitles"
+  srcLang="en"
+  label="English"
+/>
+Your browser does not support the video tag.
+</video> */}
