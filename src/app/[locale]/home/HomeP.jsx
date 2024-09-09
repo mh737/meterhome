@@ -32,7 +32,7 @@ function HomeP() {
       <script src="/nav.js" async />
       <div className="w-full md:text-center items-center md:wrap md:flex flex-col">
         <div className="ml-5 !z-10 !relative max-h-[348px]">
-        <h1 className="text-7xl mb-4 mt-4">Ultra-Wide Band eID Validation System</h1>
+        <h1 className="text-7xl mb-4 md:mt-32 mt-4">Ultra-Wide Band eID Validation System</h1>
         <button className="p-2 border-amber-50 border-2 bg-black">Demostration</button>
       </div>
       <Image
@@ -50,21 +50,22 @@ function HomeP() {
   
       <div className="unitwrapper spacer-top !flex-nowrap">
         <h2 className="eyebrow block">Feature</h2>
-        <p className="headline block"> Low cost</p>
+        <p className="headline block"> Revolutionary eID system</p>
         <div className="section-content text-center">
-          <p className="reduced-headline">Revolutionary eID system</p>
-          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
+          {/* <p className="reduced-headline"></p> */}
+          <p className="section-body  w-[100%] md:w-[80%] ml-auto mr-auto">
             Through METER portal, you can instantly issue and revoke eID, anywhere, anytime.
           </p>
         </div>
-        <div className="w-[200%] md:w-full overflow-hidden">
-          <Image src={Image2} alt="Vercel Logo" className="w-[50%] inline-block" priority />
-          <Image src={Image3} alt="Vercel Logo" className="w-[50%] inline-block" priority />
+        <div className="w-[200%] md:w-full overflow-hidden text-center">
+          <Image src={Image2} alt="Vercel Logo" className="max-w-[50%] inline-block md:h-[100vh] w-auto" priority />
+          <Image src={Image3} alt="Vercel Logo" className="max-w-[50%] inline-block md:h-[100vh] w-auto" priority />
 
         </div>
+        <p className="headline block"> True contactless expreience</p>
         <div className="section-content text-center">
-          <p className="reduced-headline">True contactless expreience</p>
-          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
+          {/* <p className="reduced-headline"></p> */}
+          <p className="section-body  w-[100%] md:w-[80%] ml-auto mr-auto pb-20">
             The anchor automatically connects to your device. <br /> Approach it to free your hands
           </p>
         </div>
@@ -72,24 +73,24 @@ function HomeP() {
         <div className="speakers-container">
           <Image src={Image4} alt="Vercel Logo" className="largepic" priority />
         </div>
-        <p className="headline block">{t("extra-security")}</p>
+        <p className="headline block pb-7 pt-28">{t("extra-security")}</p>
 
         <div className="section-content text-center">
           <p className="reduced-headline"> Your e-ID is stored on the Secure Element on your phone</p>
 
-          <Image src={Image5} alt="Vercel Logo" className="h-[200px] mr-auto ml-auto w-[200px]" priority />
-          <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
+          <Image src={Image5} alt="Vercel Logo" className="h-[200px] mr-auto ml-auto mt-10 w-[200px]" priority />
+          <p className="section-body  w-[100%] md:w-[80%] ml-auto mr-auto">
             Ultra-Wide Band technology (UWB) enables real-time ranging to provide tamper-resistant protection
           </p>
         </div>
         <div className="speakers-container">
           <Image src={Image6} alt="Vercel Logo" className="largepic" priority />
         </div>
-        <div className="w-full md:block flex wrap flex-col items-center">
-          <Image src={Image7} alt="Vercel Logo" className="md:w-[50%] w-[70%] inline-block" priority />
+        <div className="w-full flex wrap flex-col md:flex-row md:w-[80vw] md:justify-center items-center">
+          <Image src={Image7} alt="Vercel Logo" className="md:h-[100vh] md:w-auto w-[70%] inline-block" priority />
           <div className="section-content text-center md:!w-[50%] !inline-block">
             <p className="reduced-headline">Lost mode</p>
-            <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto">
+            <p className="section-body  w-[100%] md:w-[80%] ml-auto mr-auto">
               The 'Lost Mode' on your phone immediately protects your identity
             </p>
           </div>
@@ -98,22 +99,22 @@ function HomeP() {
       </div>
       <div className="unitwrapper spacer-top !flex-nowrap !bg-slate-100 !text-slate-950">
         <h2 className="eyebrow block">Use Case</h2>
-        <p className="headline block">Application</p>
+        <p className="headline block pb-10">Application</p>
         <div className="flex flex-wrap w-full md:!w-[80%]">
-          <Image src={Image8} alt="Vercel Logo" className="basis-[50%] " priority />
+          <Image src={Image8} alt="Vercel Logo" className="largepic" priority />
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
             Parking entrance and exit. No more annoying stopping.<br /><br />
             <button className="p-3 bg-orange-500 rounded-full font-thin"> <div className="rounded-full border-white border-2 inline-block w-8 text-white">→</div> Learn more about <div className="font-bold inline-block hover:text-white ">Parking</div></button>
             {/* <button className="p-3 bg-orange-500  rounded-full hover:text-white">→ Learn more about <b>Parking</b></button> */}
           </p>
 
-          <Image src={Image9} alt="Vercel Logo" className="basis-[50%] " priority />
+          <Image src={Image9} alt="Vercel Logo" className="largepic" priority />
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
             Access control at different types of properties. You can share a one-time pass with your guest<br /><br />
             <button className="p-3 bg-orange-500 rounded-full font-thin"> <div className="rounded-full border-white border-2 inline-block w-8 text-white">→</div> Learn more about <div className="font-bold inline-block hover:text-white ">Access control</div></button>
             {/* <button className="p-3 bg-orange-500  rounded-full hover:text-white">→ Learn more about <b>Access control</b></button> */}
           </p>
-          <Image src={Image10} alt="Vercel Logo" className="basis-[50%] " priority />
+          <Image src={Image10} alt="Vercel Logo" className="largepic" priority />
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
             Integrated into self-service kiosk. You can now truly focus on your work <br /><br />
             <button className="p-3 bg-orange-500 rounded-full font-thin"> <div className="rounded-full border-white border-2 inline-block w-8 text-white">→</div> Learn more about <div className="font-bold inline-block hover:text-white ">Self-service</div></button>
