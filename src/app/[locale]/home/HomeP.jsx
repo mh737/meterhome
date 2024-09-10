@@ -3,6 +3,10 @@
 import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
 
+import React from "react";
+import Popup from 'reactjs-popup';
+import "./popup.css";
+
 import "./home.css";
 import Image from "next/image";
 import { Link as NavLink } from "../../../navigation";
@@ -20,6 +24,8 @@ import Image10 from "../../../../public/image/Demo2/10.jpg"
 
 
 function HomeP() {
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+
   const t = useTranslations("HomePage");
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -30,10 +36,29 @@ function HomeP() {
   return (
     <>
       <script src="/nav.js" async />
+      <Popup trigger={<button className="trigger-button">Click to open popup</button>} position="right center" modal nested>
+        {close => (
+          <div className="modal">
+            <button className="close" onClick={close}>
+              &times;
+            </button>
+            <div className="header"> GeeksforGeeks </div>
+            <div className="content">
+              This is a simple popup example.
+            </div>
+            <div className="actions">
+              <button className="button" onClick={() => {
+                console.log('Button clicked');
+                close();
+              }}>Click here</button>
+            </div>
+          </div>
+        )}
+      </Popup>
       <div className="w-full md:text-center items-center md:wrap md:flex flex-col">
         <div className="ml-5 !z-10 !relative max-h-[348px]">
         <h1 className="text-7xl mb-4 md:mt-32 mt-4">Ultra-Wide Band eID Validation System</h1>
-        <button className="p-2 border-amber-50 border-2 bg-black">Demostration</button>
+        <Nextbut onPress={onOpen} className="p-2 border-amber-50 border-[1px] bg-black">Demostration</Nextbut>
       </div>
       <Image
         src={Image1}
@@ -157,20 +182,9 @@ function HomeP() {
         </div>
         </div>
       </div>
+
     </>
   );
 }
 
 export default HomeP;
-
-
-{/* <video width="320" height="240" controls preload="none">
-<source src="/image/Demo2/ani1.MP4" type="video/mp4" />
-<track
-  src="/path/to/captions.vtt"
-  kind="subtitles"
-  srcLang="en"
-  label="English"
-/>
-Your browser does not support the video tag.
-</video> */}
