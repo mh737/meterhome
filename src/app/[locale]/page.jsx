@@ -1,7 +1,7 @@
 
 
 
-
+import Footbar from "./components/Footer";
 import Navbar from "./components/Navbar";
 import HomeP from "./home/HomeP.jsx";
 
@@ -12,6 +12,7 @@ export default function Home() {
       
       <Navbar></Navbar>
       <HomeP />
+      <Footbar></Footbar>
     </>
   );
 }
