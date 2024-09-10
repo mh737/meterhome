@@ -34,7 +34,7 @@ function HomeP() {
   if (!mounted) return <></>;
   return (
     <>
-      <script src="/nav.js" async />
+      {/* <script src="/nav.js" async /> */}
 
       <div className="w-full md:text-center items-center md:wrap md:flex flex-col">
         <div className="ml-5 !z-10 !relative max-h-[348px]">
@@ -99,7 +99,7 @@ function HomeP() {
         />
         <div className="w-[70%] flex ml-auto mr-auto justify-between en mt-[-50px] z-10 !relative xl:w-[50%] md:mt-[-100px]">
           <div className="text-2xl">METER portal</div>
-          <div className="text-2xl">Your device</div>
+          <div className="text-2xl text-end ">Your device</div>
         </div>
       </div>
 
@@ -243,9 +243,9 @@ function HomeP() {
           </p>
         </div>
       </div>
-      <div className=" !bg-slate-950 !text-slate-100">
-        <div className="w-full md:w-[90%] flex ml-auto mr-auto mt-32 ">
-          <div className="w-[50%]">
+      <div className="  !text-slate-100">
+        <div className="w-full md:w-[90%] md:flex ml-auto mr-auto mt-32 ">
+          <div className="md:w-[50%] mb-14 md:mb-0">
             <div className="text-slate-300">Contact</div>
             <ul>
               <NavLink href="/">
@@ -262,7 +262,7 @@ function HomeP() {
               </NavLink>
             </ul>
           </div>
-          <div className="w-[50%]">
+          <div className="md:w-[50%] w-full">
             <div className="text-slate-300">Explore METER</div>
             <ul>
               <NavLink href="/">
@@ -277,8 +277,8 @@ function HomeP() {
             </ul>
           </div>
         </div>
-        <div className="w-full md:w-[90%] flex ml-auto mr-auto mt-32 mb-32">
-          <div className="w-[50%]">
+        <div className="w-full md:w-[90%] md:flex ml-auto mr-auto mt-32 mb-32">
+          <div className="md:w-[50%]">
             <ul>
               <NavLink href="/">
                 <li className="text-2xl inline-block mr-3">FB</li>
@@ -288,8 +288,8 @@ function HomeP() {
               </NavLink>
             </ul>
           </div>
-          <div className="w-[50%]">
-            <ul className="text-end">
+          <div className="md:w-[50%]">
+            <ul className="md:text-end">
               <NavLink href="/">
                 <li className="text-2xl inline-block mr-3">English</li>
               </NavLink>
