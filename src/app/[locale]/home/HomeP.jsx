@@ -171,7 +171,7 @@ function HomeP() {
           <div className="section-content text-center md:!w-[50%] !inline-block">
             <p className="reduced-headline">Lost mode</p>
             <p className="section-body  w-[100%] md:w-[80%] ml-auto mr-auto">
-              The 'Lost Mode' on your phone immediately protects your identity
+              The &quot;Lost Mode&quot; on your phone immediately protects your identity
             </p>
           </div>
         </div>
