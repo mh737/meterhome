@@ -270,3 +270,9 @@
         --hero-min-height: 600px;
     }
 }
+
+.goto:hover{
+    .servicegoto{
+        color: white;
+    }
+}
