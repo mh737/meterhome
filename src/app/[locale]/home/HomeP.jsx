@@ -58,7 +58,7 @@ function HomeP() {
                   &times;
                 </button> */}
                 {/* <div className="header"> GeeksforGeeks </div> */}
-                <div className="content">
+                <div className="content m-0">
                   <video
                     width="320"
                     height="240"
@@ -76,16 +76,16 @@ function HomeP() {
                     Your browser does not support the video tag.
                   </video>
                 </div>
-                <div className="actions">
-                  {/* <button
-                    className="button"
+                <div className="actions p-0 m-0">
+                  <button
+                    className="button !bg-red-600 !w-full m-0 !mt-2"
                     onClick={() => {
                       console.log("Button clicked");
                       close();
                     }}
                   >
-                    Click here
-                  </button> */}
+                    Close Demo
+                  </button>
                 </div>
               </div>
             )}
@@ -113,7 +113,7 @@ function HomeP() {
             anywhere, anytime.
           </p>
         </div>
-        <div className="w-[200%] md:w-full overflow-hidden text-center">
+        <div className="w-[100%] md:w-full overflow-hidden text-center">
           <Image
             src={Image2}
             alt="Vercel Logo"

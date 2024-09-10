@@ -38,7 +38,7 @@ export default async function LocaleLayout({
         }; */}
         </script>
       </head>
-      <body className='overflow-x-hidden'>
+      <body className='overflow-x-hidden max-w-[100vw]'>
         
         <NextIntlClientProvider messages={messages}>
           {children}
