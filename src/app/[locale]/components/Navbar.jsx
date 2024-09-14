@@ -51,7 +51,7 @@ function Navbar() {
                                 height={47}
                                 alt="METER logo"
                             />
-                            <pre >METER</pre>
+                            <pre >{t("logo")}</pre>
 
                         </div>
                     </NavLink>

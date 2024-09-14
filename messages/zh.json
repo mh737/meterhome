@@ -1,26 +1,43 @@
 {
     "HomePage": {
+      "pretitle":"大癲!出左",
+      "aftertitle":"點部署?",
       "title": "超寬頻電子身份驗證系統",
-      "how-to-use": "示範和體驗",
-      "select-plan": "我有興趣",
-      "scroll-down": "向下滑動以了解更多",    
-      "extra-security": "額外安全保護",
-      "extra-security-1": "您的 elD 儲存在您手機的安全元件上。",
+      "titlebutton": "觀看示範",
+      "closedemo":"關閉示範",
+      "titlebuttonleft": "Meter感應器",
+      "titlebuttonright": "您的裝置",
+      "feature":"I 人、E 人都啱用",
+      "revolutary": "體驗劃時代的力量",
+      "precontact":"世一技術",
+      "contactless":"真゜免觸體驗",
+      "preextrasec":"無懼hacker PUA",
+      "extra-security": "更安全，更放心",
+      "extra-security-1": "您的電子身份儲存在您手機的安全元件上。",
       "extra-security-2": "採用超寬頻技術建立即時測距，具有防篡改保護。",
+      "lostmode": "唔見電話做個深呼吸",
       "extra-security-3": "您手機上的「遺失模式」會立即保護您的身分。",
       "low-cost": "低成本",
-      "low-cost-1": "不再需要支付實體身分證的費用。",
-      "low-cost-2": "告別固定的卡片管理成本。在平台上分發和禁用 ELD。",
-      "use-case": "適用於：",
-      "use-case-1": "工作場所入口",
-      "use-case-2": "自助式",
+      "low-cost-1": "感應器自動連接裝置，解放雙手",
+      "low-cost-1-1": "",
+      "low-cost-2": "智能電子身份不再需要換卡,在平台上發放和控制權限, 節省管理成本。",
+      "use-case": "噓~流量密碼?",
+      "application":"咁..邊度啱用？",
+      "use-case-1": "權限控制",
+      "use-case-2": "自助服務",
       "use-case-3": "學校出席",
-      "use-case-4": "停車聯絡表 "
+      "use-case-4": "停車場",
+      "use-case-1-1": "全面控制訪問權限。您可以共享一次性通行證予訪客",
+      "use-case-2-1": "將感應器嵌入於自助服務站, 無阻您工作的熱誠",
+      "use-case-3-1": "學校出席",
+      "use-case-4-1": "毫無停頓。於停車場出入毋須搵八達通",
+      "learnmoreabout":"  瞭解如何使用於  "
     },
     "NotFoundPage": {
       "title": "搵唔到! 404 "
     },
     "NavPage":{
+      "logo": "一米通",
       "homepage": "回到主頁",
       "contact": "聯絡我們",
       "change-lang-text":"EN",
@@ -33,6 +50,18 @@
       "email":"您的電子郵件",
       "message":"留言給我們",
       "submit":"提交",
-    "back":"回到主頁"
+      "back":"回到主頁"
+    },
+    "Footer":{
+      "contact": "聯絡我們",
+      "contact1": "尋找我們",
+      "contact2": "一般查詢",
+      "contact3": "意見分享",
+      "contact4": "預約試駕",
+      "contact5": "探索METER",
+      "contact6": "METER 香港官方網上商店",
+      "contact7": "訂閱",
+      "change-lang-text":"ENGLISH",
+      "change-lang-locale":"en"
     }
   }

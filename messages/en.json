@@ -1,26 +1,43 @@
 {
   "HomePage": {
-    "title": "Ultra-Wide Band eID Vaildation System",
-    "how-to-use": "Demo",
-    "select-plan": "Interested!",
-    "scroll-down": "Scroll and Learn More",
+    "pretitle":"Say less,",
+    "title": "Ultra-Wide Band e-ID Vaildation System",
+    "aftertitle":"dropped",
+    "titlebutton": "Demostration",
+    "closedemo":"Hide demo",
+    "titlebuttonleft": "METER portal",
+    "titlebuttonright": "Your device",
+    "feature":"Feature",
+    "revolutary": "Revolutionary e-ID system",
+    "precontact":"Lowkey",
+    "contactless":"Contactless, no cap",
+    "preextrasec":"",
     "extra-security": "Extra Security Protection",
     "extra-security-1": "Your elD is stored on the Secure Element of your phone.",
     "extra-security-2": "Ultra-Wide Band technology is used to establish a real-time ranging with tamper-resistant protection. ",
+    "lostmode": "Lost your phone?",
     "extra-security-3": "The \"Lost Mode\" on your phone immediately protects your identity. ",
     "low-cost": "Low Cost",
-    "low-cost-1": "No more cost for a solid identity card. ",
-    "low-cost-2": "Say bye to solid card management cost. Distribute and disable elDs on the platform. ",
-    "use-case": "Applicable at: ",
-    "use-case-1": "Workplace entrance",
+    "low-cost-1": "The anchor automatically connects to your device.",
+    "low-cost-1-1": "Approach it to free your hands",
+    "low-cost-2": "Administrator can distribute and manage the access control. Also reduce the cost of maintenance as e-ID is stored on your phone. ",
+    "use-case": "",
+    "application": "Application",
+    "use-case-1": "Access-control",
     "use-case-2": "Self-service",
     "use-case-3": "School attendance",
-    "use-case-4": "Parking Contact form "
+    "use-case-4": "Parking",
+    "use-case-1-1": "Access control at different types of properties. You can share a one-time pass with your guest",
+    "use-case-2-1": "Integrated into self-service kiosk. You can now truly focus on your work",
+    "use-case-3-1": "School attendance",
+    "use-case-4-1": "Parking entrance and exit. No more annoying stopping.",
+    "learnmoreabout":"Learn more about  "
   },
   "NotFoundPage": {
     "title": "Not found!"
   },
   "NavPage": {
+    "logo": "METER",
     "contact": "Contact us",
     "homepage": "Home",
     "change-lang-text": "中",
@@ -33,5 +50,17 @@
     "message":"Message to us",
     "submit":"Submit",
     "back":"Back to HomePage"
-  }
+  },
+  "Footer":{
+      "contact": "Contact",
+      "contact1": "Find US",
+      "contact2": "General Enquiry",
+      "contact3": "Feedback",
+      "contact4": "Request a Test Ride",
+      "contact5": "Explore METER",
+      "contact6": "METER HK Offcial Online Store",
+      "contact7": "Subscribe to our newsletter",
+      "change-lang-text": "中",
+      "change-lang-locale": "zh"
+    }
 }

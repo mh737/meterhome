@@ -71,10 +71,10 @@ function Contact() {
     // <div className="App">
     <>
       <Navbar></Navbar>
-      <div className="home">
-        <h1 className="title">{t("title")}</h1>
+      <main className="bg-gray-200 h-[100vh] w-full">
+        <h1 className="text-4xl text-center w-full pt-32 text-black">{t("title")}</h1>
         <form
-          className="contact-form row border-amber-50"
+          className="contact-form row w-full md:w-[70%]"
           action="https://formspree.io/f/mrbzlvvd"
           method="POST"
         >
@@ -99,17 +99,18 @@ function Contact() {
             <label className="label prevent-select" htmlFor="email">
               {t("email")}
             </label>
+            <label className="label !-bottom-10 prevent-select" htmlFor="message">
+              {t("message")}
+            </label>
           </div>
           <div className="form-field col x-100">
             {/* <input name="message" className="input-text js-input text-wrap whitespace-normal" type="text" required /> */}
             <textarea
               name="message"
-              className="input-text js-input h-[100px]"
+              className="input-text !h-[100px]"
               required
             ></textarea>
-            <label className="label prevent-select" htmlFor="message">
-              {t("message")}
-            </label>
+            
           </div>
           <div className="form-field col x-100 align-center mt-6 mb-4">
             <input
@@ -118,17 +119,13 @@ function Contact() {
               value={t("submit")}
             />
           </div>
-          <div
-            className="cf-turnstile"
-            data-sitekey="0x4AAAAAAAh2iM15h5SbEeRF"
-          ></div>
         </form>
         <NavLink href="/">
-          <h1 className="title underline hover:underline-offset-2">
+          <h1 className="underline text-black hover:underline-offset-2 w-full text-xl text-center">
             {t("back")}
           </h1>
         </NavLink>
-      </div>
+      </main>
       <Footbar></Footbar>
     </>
   );

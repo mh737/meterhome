@@ -38,14 +38,17 @@ function HomeP() {
 
       <div className="w-full md:text-center items-center md:wrap md:flex flex-col">
         <div className="ml-5 !z-10 !relative max-h-[348px]">
-          <h1 className="text-7xl mb-4 md:mt-32 mt-4">
-            Ultra-Wide Band eID Validation System
+          <h1 className=" mb-4 md:mt-32 mt-4">
+          <div className="block text-start en">{t("pretitle")}</div>
+            <div className="text-5xl indent-[-1px]">{t("title")}</div>
+            <div className="block md:text-end en">{t("aftertitle")}</div>
           </h1>
+          
 
           <Popup
             trigger={
               <button className="p-2 border-amber-50 border-[1px] bg-black">
-                Demostration
+                {t("titlebutton")}
               </button>
             }
             position="right center"
@@ -84,7 +87,7 @@ function HomeP() {
                       close();
                     }}
                   >
-                    Close Demo
+                    {t("closedemo")}
                   </button>
                 </div>
               </div>
@@ -94,23 +97,22 @@ function HomeP() {
         <Image
           src={Image1}
           alt="Vercel Logo"
-          className="large-pic !relative mt-[-120px] !z-0"
+          className="large-pic !relative mt-[-60px] md:mt-[-120px] !z-0"
           priority
         />
         <div className="w-[70%] flex ml-auto mr-auto justify-between en mt-[-50px] z-10 !relative xl:w-[50%] md:mt-[-100px]">
-          <div className="text-2xl">METER portal</div>
-          <div className="text-2xl text-end ">Your device</div>
+          <div className="text-2xl">{t("titlebuttonleft")}</div>
+          <div className="text-2xl text-end ">{t("titlebuttonright")}</div>
         </div>
       </div>
 
       <div className="unitwrapper spacer-top !flex-nowrap">
-        <h2 className="eyebrow block">Feature</h2>
-        <p className="headline block"> Revolutionary eID system</p>
+        <h2 className="eyebrow block">{t("feature")}</h2>
+        <p className="headline block">{t("revolutary")}</p>
         <div className="section-content text-center">
           {/* <p className="reduced-headline"></p> */}
           <p className="section-body  w-[100%] md:w-[80%] ml-auto mr-auto">
-            Through METER portal, you can instantly issue and revoke eID,
-            anywhere, anytime.
+            {t("low-cost-2")}
           </p>
         </div>
         <div className="w-[100%] md:w-full overflow-hidden text-center">
@@ -127,24 +129,24 @@ function HomeP() {
             priority
           />
         </div>
-        <p className="headline block pt-28"> True contactless expreience</p>
+        <p className="headline block pt-28"><h2 className="eyebrow block mb-8">{t("precontact")}</h2>{t("contactless")}</p>
         <div className="section-content text-center">
           {/* <p className="reduced-headline"></p> */}
           <p className="section-body  w-[100%] md:w-[80%] ml-auto mr-auto pb-20">
-            The anchor automatically connects to your device. <br /> Approach it
-            to free your hands
+            {t("low-cost-1")} <br /> {t("low-cost-1-1")} 
           </p>
         </div>
 
         <div className="speakers-container">
           <Image src={Image4} alt="Vercel Logo" className="largepic" priority />
         </div>
-        <p className="headline block pb-7 pt-28">{t("extra-security")}</p>
+        
+        <p className="headline block pb-7 pt-28"><h2 className="eyebrow block mb-8">{t("preextrasec")}</h2>{t("extra-security")}</p>
 
         <div className="section-content text-center">
           <p className="reduced-headline">
             {" "}
-            Your e-ID is stored on the Secure Element on your phone
+            {t("extra-security-1")}
           </p>
 
           <Image
@@ -154,8 +156,7 @@ function HomeP() {
             priority
           />
           <p className="section-body  w-[100%] md:w-[80%] ml-auto mr-auto">
-            Ultra-Wide Band technology (UWB) enables real-time ranging to
-            provide tamper-resistant protection
+            {t("extra-security-2")}
           </p>
         </div>
         <div className="speakers-container">
@@ -165,24 +166,24 @@ function HomeP() {
           <Image
             src={Image7}
             alt="Vercel Logo"
-            className="md:h-[100vh] md:w-auto w-[70%] inline-block"
+            className="md:h-[100vh] md:w-auto w-[70%] inline-block md:mb-12"
             priority
           />
           <div className="section-content text-center md:!w-[50%] !inline-block">
-            <p className="reduced-headline">Lost mode</p>
+            <p className="reduced-headline">{t("lostmode")}</p>
             <p className="section-body  w-[100%] md:w-[80%] ml-auto mr-auto">
-              The &quot;Lost Mode&quot; on your phone immediately protects your identity
+              {t("extra-security-3")}
             </p>
           </div>
         </div>
       </div>
       <div className="unitwrapper spacer-top !flex-nowrap !bg-slate-100 !text-slate-950">
-        <h2 className="eyebrow block">Use Case</h2>
-        <p className="headline block pb-10">Application</p>
+        <h2 className="eyebrow block">{t("use-case")}</h2>
+        <p className="headline block pb-10">{t("application")}</p>
         <div className="flex flex-wrap w-full md:!w-[80%]">
           <Image src={Image8} alt="Vercel Logo" className="largepic" priority />
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
-            Parking entrance and exit. No more annoying stopping.
+          {t("use-case-4-1")}
             <br />
             <br />
             <button className="p-3 bg-orange-500 rounded-full font-thin goto">
@@ -191,18 +192,16 @@ function HomeP() {
                 <div className="w-full h-full flex items-center justify-center">
                   →
                 </div>
-              </div>{" "}
-              Learn more about{" "}
+              </div>{t("learnmoreabout")}
               <div className="font-bold inline-block hover:text-white servicegoto ">
-                Parking
+              {t("use-case-4")}
               </div>
             </button>
           </p>
 
           <Image src={Image9} alt="Vercel Logo" className="largepic" priority />
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
-            Access control at different types of properties. You can share a
-            one-time pass with your guest
+          {t("use-case-1-1")}
             <br />
             <br />
             <button className="p-3 bg-orange-500 rounded-full font-thin goto">
@@ -211,10 +210,9 @@ function HomeP() {
                 <div className="w-full h-full flex items-center justify-center">
                   →
                 </div>
-              </div>{" "}
-              Learn more about{" "}
+              </div>{t("learnmoreabout")}
               <div className="font-bold inline-block hover:text-white  servicegoto">
-                Access-control
+              {t("use-case-1")}
               </div>
             </button>
           </p>
@@ -225,8 +223,8 @@ function HomeP() {
             priority
           />
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
-            Integrated into self-service kiosk. You can now truly focus on your
-            work <br />
+          {t("use-case-2-1")}
+             <br />
             <br />
             <button className="p-3 bg-orange-500 rounded-full font-thin goto">
               {" "}
@@ -234,10 +232,9 @@ function HomeP() {
                 <div className="w-full h-full flex items-center justify-center">
                   →
                 </div>
-              </div>{" "}
-              Learn more about{" "}
+              </div>{t("learnmoreabout")}
               <div className="font-bold inline-block hover:text-white servicegoto">
-                Self-service
+                {t("use-case-2")}
               </div>
             </button>
           </p>

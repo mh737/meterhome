@@ -39,7 +39,7 @@ export default function middleware(req: NextRequest) {
   }
 
   // Fallback to the default locale if no valid locale was found in the Referer
-  const effectiveLocale = refererLocale || 'en';
+  const effectiveLocale = refererLocale || 'zh';                                   //default locale is here
 
   // Check if the current request's URL already includes a locale
   const hasLocale = locales.some(locale => req.nextUrl.pathname.startsWith(`/${locale}`));
