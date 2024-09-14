@@ -17,10 +17,12 @@ const db = require('serverless-mysql')(`mysql://${process.env.USERNAME1}:${proce
 export default async function excuteQuery({ query, values }) { //values : [ , ]  //insert into ? => "name"
     try {
         const results = await db.query(query, values);
+        // console.log(results)
         await db.end();
         return results;
       } catch (error) {
-        return { error };
+        // console.error({error})
+        return "400" + error.toString() ; //return {error}
       }
 }
 
