@@ -12,6 +12,7 @@
     "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
+    "firebase": "^10.13.1",
     "next": "^14.2.6",
     "next-intl": "^3.17.4",
     "react": "^18",

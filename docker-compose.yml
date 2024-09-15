@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  meterhk:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "5457:4000"
+    # env_file:
+    #   - .env
+    # volumes:
+    #   - .:/app
+    #   - /app/node_modules
+    # docker build . --file Dockerfile.prod --tag meterhk:1.0
+    # docker save -o file.tar meterhk
+    # docker load -i file .tar
+
+    meterhk:
+      image: meterhk:1.0
+      restart: always
+      ports:
+      - "5457:4000"
