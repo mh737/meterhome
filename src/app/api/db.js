@@ -19,7 +19,9 @@ export default async function excuteQuery({ query, values }) { //values : [ , ] 
         const results = await db.query(query, values);
         // console.log(results)
         await db.end();
+        console.log(results);
         return results;
+        
       } catch (error) {
         // console.error({error})
         return "400" + error.toString() ; //return {error}
