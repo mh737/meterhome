@@ -6,12 +6,12 @@ module.exports = {
     webpack5: true,
   },
   webpack: (config, { isServer }) => {
-    if (!isServer) {
+    // if (!isServer) {
       config.optimization = {
         ...config.optimization,
         minimize: false,
       };
-    }
+    // }
     return config;
   },
 };
