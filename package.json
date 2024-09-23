@@ -13,8 +13,9 @@
   },
   "dependencies": {
     "firebase": "^10.13.1",
-    "next": "^14.2.6",
+    "next": "^14.2.10",
     "next-intl": "^3.17.4",
+    "node-rsa": "^1.1.1",
     "react": "^18",
     "react-dom": "^18",
     "react-quill": "^2.0.0",
@@ -23,6 +24,7 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
+    "next": ">=14.2.10",
     "@cloudflare/next-on-pages": "^1.13.2",
     "@types/node": "^20",
     "@types/react": "^18",
