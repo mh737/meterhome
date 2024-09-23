@@ -1,10 +1,13 @@
 
-import db1 from "../../../../db"
+import db1 from "../../db"
+import { decryptData } from "../../../rsa/rsa2";
 
 export async function POST(request: Request, { params }: any) {
     let query, value, result: { [x: string]: any; };
     // console.log(params.name)
-    value = JSON.parse(params.name)
+    const formData = await request.formData()
+    const name = formData.get('query')  as string 
+    value = decryptData(JSON.parse(name))
     switch (params.mode) {
 
         case "add":

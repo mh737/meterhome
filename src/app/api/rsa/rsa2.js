@@ -45,7 +45,7 @@ export function generateKeyPair(keySize = 2048) {
 }
 
 // Encrypt data using the provided public key
-export function encryptData(data, publicKey) {
+export function encryptData(data, publicKey = process.env.PUBLICKEY) {
   const key = new NodeRSA(publicKey, 'public');
   key.setOptions({encryptionScheme: 'pkcs1'});
   key.setOptions({ environment: "browser" });
@@ -53,7 +53,7 @@ export function encryptData(data, publicKey) {
 }
 
 // Decrypt data using the provided private key
-export function decryptData(data, privateKey) {
+export function decryptData(data, privateKey = process.env.PRIVATEKEY) {
   const key = new NodeRSA(privateKey, 'private');  //pkcs8 encoding?
   key.setOptions({encryptionScheme: 'pkcs1'});   // encoding too long?
   key.setOptions({ environment: "browser" }); //riginal error: TypeError: RSA_PKCS1_PADDING is no longer supported for private decryption, this can be reverted with --security-revert=CVE-2023-46809

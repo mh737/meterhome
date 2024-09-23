@@ -1,15 +1,14 @@
 import { NextResponse, type NextRequest } from 'next/server'
-import  excuteQuery  from "./db.js";
-
+import  excuteQuery  from "./access/db.js";
+import { decryptData } from "./rsa/rsa2.js";
 
 export async function POST(request: Request , {params}: any) {
   
   const formData = await request.formData()
-  const name = formData.get('query')
-  const email = formData.get('value')
+  const name = decryptData(formData.get('query')  as string )
   const result = await excuteQuery({
     query: name,
-    values: email,
+    values: "",
   });
     return new Response("ttt" + result , {      status: 200,    })
 }
