@@ -23,5 +23,5 @@ module.exports = {
     // }
     return config;
   },
- withNextIntl(nextConfig);
+ withNextIntl(nextConfig)
 };
