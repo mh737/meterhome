@@ -16,7 +16,7 @@ function Footbar() {
   const t = useTranslations("Footer");
 
   const pathname = usePathname();
-  console.log(pathname)
+  // console.log(pathname)
   return (
     <>
       <footer className="  !text-slate-100">

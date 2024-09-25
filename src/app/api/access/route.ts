@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server'
-import  excuteQuery  from "./access/db.js";
-import { decryptData } from "./rsa/rsa2.js";
+import  excuteQuery  from "./db.js";
+import { decryptData,encryptData } from "../rsa/rsa2.js";
 
 export async function POST(request: Request , {params}: any) {
   
@@ -10,7 +10,11 @@ export async function POST(request: Request , {params}: any) {
     query: name,
     values: "",
   });
-    return new Response("ttt" + result , {      status: 200,    })
+  try{
+    return new Response(encryptData(JSON.stringify(result)) , {      status: 200,    })
+  }catch(e){
+    return new Response("" + result , {      status: 200,    })
+  }
 }
 
 export async function GET(request: NextRequest, context: any) {

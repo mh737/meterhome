@@ -40,7 +40,7 @@ function Navbar() {
     }
     const t = useTranslations('NavPage');
     const pathname = usePathname();
-    console.log(pathname)
+    // console.log(pathname)
     return (
         <>
             <nav id="navbar">
