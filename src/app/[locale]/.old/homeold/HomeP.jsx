@@ -3,7 +3,9 @@ import "../../../../public/HomeStyles.css";
 // import Script from 'next/script'
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
-import { Link as NavLink } from "../../../../navigation"
+// import { Link as NavLink } from "../../../../navigation"
+
+import {Link as NavLink } from '@/i18n/routing';
 
 
 function HomeP() {

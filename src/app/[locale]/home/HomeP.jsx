@@ -9,7 +9,6 @@ import "./popup.css";
 
 import "./home.css";
 import Image from "next/image";
-import { Link as NavLink } from "../../../navigation";
 
 import Image1 from "../../../../public/image/Demo2/1.png";
 import Image2 from "../../../../public/image/Demo2/2.png";

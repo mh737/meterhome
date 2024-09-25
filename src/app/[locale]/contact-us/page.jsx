@@ -8,7 +8,9 @@ import { useTranslations } from "next-intl";
 import "./Specsty.css";
 import { useEffect } from "react";
 
-import { Link as NavLink } from "../../../navigation";
+import {Link as NavLink } from '@/i18n/routing';
+
+// import { Link as NavLink } from "../../../navigation";
 
 function Contact() {
   const t = useTranslations("ContactPage");

@@ -3,7 +3,10 @@ import { React, useState, useTransition } from "react";
 
 import "./NavbarStyles.css";
 import Image from 'next/image';
-import { Link as NavLink } from "../../../navigation"
+
+import {Link as NavLink, usePathname } from '@/i18n/routing';
+
+// import { Link as NavLink } from "../../../navigation"
 import { useTranslations } from 'next-intl';
 // import twitterIcon from "../../public/meter.jpg";
 
@@ -36,7 +39,8 @@ function Navbar() {
         isSetClick(!isClick);
     }
     const t = useTranslations('NavPage');
-
+    const pathname = usePathname();
+    console.log(pathname)
     return (
         <>
             <nav id="navbar">
@@ -59,8 +63,8 @@ function Navbar() {
                         {/* <a href="/plan" className="">Plan</a>
                 <a href="tutorial">tutorial</a>
                 <a href="/support">Supported device</a> */}
-                        <NavLink href="/" className="link">{t("homepage")}</NavLink>
-                        <NavLink href="/contact-us" className="link">{t("contact")}</NavLink>
+                        <NavLink href="/" className={(pathname == "/")?"link underline decoration-2 ":"link"}>{t("homepage")}</NavLink>
+                        <NavLink href="/contact-us" className={(pathname == "/contact-us")?"link underline decoration-2 ":"link"}>{t("contact")}</NavLink>
                     </div>
                     <div className=" max-md:hidden">
                         <NavLink href="/" locale={t("change-lang-locale")} className="en link" >{t("change-lang-text")}</NavLink>
@@ -87,8 +91,8 @@ function Navbar() {
 
                                 ></Image>
                             )}
-                             <NavLink href="/contact-us" className="rounded-2xl m-2 p-1 !pl-2 !pr-2 !bg-blue-800 text-white hover:!bg-blue-500 transition-all inline-block">{t("contact")}</NavLink>
-                        </button>
+                             
+                        </button><NavLink href="/contact-us" className="rounded-2xl m-2 p-1 !pl-2 !pr-2 !bg-blue-800 text-white hover:!bg-blue-500 transition-all inline-block">{t("contact")}</NavLink>
                     </div>
                 </div>
                 <div className="md:hidden">
@@ -97,11 +101,11 @@ function Navbar() {
 
 
                         <div className="block">
-                            <NavLink href="/" className="block hover:bg-white hover:text-black text-white p-3">{t("homepage")}</NavLink>
-                            <NavLink href="/contact-us" className="block hover:bg-white hover:text-black text-white p-3">{t("contact")}</NavLink>
+                            <NavLink href="/" className="block hover:bg-white hover:text-black text-white p-3">{(pathname == "/")?"|  ":"   "}{t("homepage")}</NavLink>
+                            <NavLink href="/contact-us" className="block hover:bg-white hover:text-black text-white p-3">{(pathname == "/contact-us")?"|  ":"   "}{t("contact")}</NavLink>
                         </div>
                         <div className="flex justify-end">
-                            <NavLink href="/" locale={t("change-lang-locale")} className="hover:bg-white hover:text-black text-white en p-3 m-2">{t("change-lang-text")}</NavLink>
+                            <NavLink href={pathname} locale={t("change-lang-locale")} className="hover:bg-white hover:text-black text-white en p-3 m-2">{t("change-lang-text")}</NavLink>
                             {/* <button onClick={changeLang(t("change-lang-locale"))} className="hover:bg-white hover:text-black text-white en p-3 m-2">{t("change-lang-text")}</button> */}
 
                         </div>

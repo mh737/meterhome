@@ -41,7 +41,7 @@
     "contact": "Contact us",
     "homepage": "Home",
     "change-lang-text": "中",
-    "change-lang-locale": "zh"
+    "change-lang-locale": "hk"
   },
   "ContactPage": {
     "title": "Get in Touch",
@@ -61,6 +61,6 @@
       "contact6": "METER HK Offcial Online Store",
       "contact7": "Subscribe to our newsletter",
       "change-lang-text": "中",
-      "change-lang-locale": "zh"
+      "change-lang-locale": "hk"
     }
 }

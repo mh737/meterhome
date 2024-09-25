@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 
 import "./home.css";
 import Image from "next/image";
-import { Link as NavLink } from "../../../navigation";
 
 import Image1 from "../../../../public/image/2.jpg";
 import Image2 from "../../../../public/image/1.jpg";

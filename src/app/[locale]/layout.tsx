@@ -1,6 +1,3 @@
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
- 
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -9,6 +6,10 @@ export const metadata: Metadata = {
   description: "Faster. Better. METER",
 };
 
+
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
+ 
 export default async function LocaleLayout({
   children,
   params: {locale}
@@ -20,9 +21,13 @@ export default async function LocaleLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
  
+
+
+ 
   return (
     <html lang={locale}>
       <head>
+      <meta name="google" content="notranslate"></meta>
         <link rel="icon" href="/image/meter.jpg" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         {/* <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> */}

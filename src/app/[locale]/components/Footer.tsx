@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Link as NavLink } from "../../../navigation";
+import {Link as NavLink } from '@/i18n/routing';
+// import { Link} from "../../../navigation";
 import { useTranslations } from "next-intl";
 
 import lin from "@/../public/svg/lin.svg"
