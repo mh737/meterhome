@@ -1,7 +1,10 @@
 "use client";
 
+"use client";
+
+
 import Image from "next/image";
-import {Link as NavLink } from '@/i18n/routing';
+import {Link as NavLink , usePathname} from '@/i18n/routing';
 // import { Link} from "../../../navigation";
 import { useTranslations } from "next-intl";
 
@@ -12,6 +15,8 @@ import "./footer.css"
 function Footbar() {
   const t = useTranslations("Footer");
 
+  const pathname = usePathname();
+  console.log(pathname)
   return (
     <>
       <footer className="  !text-slate-100">
@@ -81,7 +86,7 @@ function Footbar() {
               {/* <NavLink href="/" locale="en">
                 <li className="text-2xl inline-block mr-3 en">{t("contact8")}</li>
               </NavLink> */}
-              <NavLink href="/" locale={t("change-lang-locale")}>
+               <NavLink href={pathname} locale={t("change-lang-locale") as "en" | "hk" | undefined}>
                 <li className="text-2xl inline-block">{t("change-lang-text")}</li>
               </NavLink>
             </ul>
