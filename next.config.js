@@ -22,6 +22,5 @@ module.exports = {
       };
     // }
     return config;
-  },
- withNextIntl(nextConfig)
+  }
 };
