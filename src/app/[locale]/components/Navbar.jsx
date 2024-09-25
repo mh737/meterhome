@@ -67,7 +67,7 @@ function Navbar() {
                         <NavLink href="/contact-us" className={(pathname == "/contact-us")?"link underline decoration-2 ":"link"}>{t("contact")}</NavLink>
                     </div>
                     <div className=" max-md:hidden">
-                        <NavLink href="/" locale={t("change-lang-locale")} className="en link" >{t("change-lang-text")}</NavLink>
+                        <NavLink href={pathname} locale={t("change-lang-locale")} className="en link" >{t("change-lang-text")}</NavLink>
                         {/* <button onClick={changeLang(t("change-lang-locale"))} >{t("change-lang-text")}</button> */}
                         {/* <NavLink href="/" locale="en">EN</NavLink> */}
                     </div>
