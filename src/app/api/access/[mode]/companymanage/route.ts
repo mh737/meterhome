@@ -7,7 +7,7 @@ export async function POST(request: Request, { params }: any) {
     // console.log(params.name)
     const formData = await request.formData()
     const name = formData.get('query')  as string 
-    value = decryptData(JSON.parse(name))
+    value = JSON.parse(decryptData(name))
     if(value.userid == value.changeuser){ return new Response('ERROR: No available for changing your own permission', { status: 400, })}
     result = await db1({ query: "SELECT permchangeowner FROM companymanage WHERE userid = ? AND companyid =?", values: [value.userid, value.companyid] })
 

@@ -7,7 +7,9 @@ export async function POST(request: Request, { params }: any) {
     // console.log(params.name)
     const formData = await request.formData()
     const name = formData.get('query')  as string 
-    value = decryptData(JSON.parse(name))
+    // console.log(name)
+    value = JSON.parse(decryptData(name))
+    // console.log(value)
     switch (params.mode) {
 
         case "add":
