@@ -17,7 +17,7 @@ export async function POST(request: Request, { params }: any) {
         switch (params.mode) {
 
             case "add":
-                    result = await db1({ query: "INSERT INTO `pass`(`companyid`, `detail`, `accesstime`, `userid`) VALUES (?,?,?,?)", values: [value.companyid,value.details, value.accesstime,value.changeuser] })
+                    result = await db1({ query: "INSERT INTO `pass`(`companyid`, `detail`, `accesstime`, `userid`) VALUES (?,?,?,?)", values: [value.companyid,value.detail, value.accesstime,value.changeuser] })
                 break;
                 
             case "change":
