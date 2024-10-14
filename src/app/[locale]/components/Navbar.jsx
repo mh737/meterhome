@@ -63,9 +63,34 @@ function Navbar() {
                         {/* <a href="/plan" className="">Plan</a>
                 <a href="tutorial">tutorial</a>
                 <a href="/support">Supported device</a> */}
-                        <NavLink href="/" className={(pathname == "/")?"link underline decoration-2 ":"link"}>{t("homepage")}</NavLink>
-                        <NavLink href="/contact-us" className={(pathname == "/contact-us")?"link underline decoration-2 ":"link"}>{t("contact")}</NavLink>
+                        <div className="dropdown-home-nav">
+                            <NavLink href="/" className={(pathname == "/")?"link underline decoration-2 ":"link"} >{t("homepage")}</NavLink>
+                            <div className="dropdown-content">
+                                <NavLink  href="/">Demo</NavLink>
+                                <NavLink  href="/#feature-home">Feature</NavLink>
+                                <NavLink  href="/#security-home">Security</NavLink>
+                                <NavLink  href="/#application-home">Application</NavLink>
+                            </div>
+                        </div>
+                        <div className="dropdown-home-nav">
+                            <NavLink href="/contact-us" className={(pathname == "/contact-us")?"link underline decoration-2 ":"link"}>{t("contact")}</NavLink>
+                            <div className="dropdown-content">
+                                <NavLink href="/">{t("contact1")}              </NavLink>
+                                <NavLink href="/">{t("contact2")}              </NavLink>
+                                <NavLink href="/">{t("contact3")}              </NavLink>
+                                <NavLink href="/">{t("contact4")}              </NavLink>
+                            </div>
+                        </div>
+                        
+                        <div className="dropdown-home-nav">
+                            <NavLink href="/" className={(pathname == "/contact-us")?"link underline decoration-2 ":"link"}>{t("contact5")}</NavLink>
+                            <div className="dropdown-content">
+                                <NavLink href="/">{t("contact6")}              </NavLink>
+                                <NavLink href="/">{t("contact7")}              </NavLink>
+                            </div>
+                        </div>
                     </div>
+                
                     <div className=" max-md:hidden">
                         <NavLink href={pathname} locale={t("change-lang-locale")} className="en link" >{t("change-lang-text")}</NavLink>
                         {/* <button onClick={changeLang(t("change-lang-locale"))} >{t("change-lang-text")}</button> */}

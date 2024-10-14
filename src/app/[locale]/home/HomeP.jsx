@@ -99,13 +99,16 @@ function HomeP() {
           className="large-pic !relative mt-[-60px] md:mt-[-120px] !z-0"
           priority
         />
-        <div className="w-[70%] flex ml-auto mr-auto justify-between en mt-[-50px] z-10 !relative xl:w-[50%] md:mt-[-100px]">
-          <div className="text-2xl">{t("titlebuttonleft")}</div>
-          <div className="text-2xl text-end ">{t("titlebuttonright")}</div>
+        <div className="largecontenthey">       
+          <div className="w-[70%] flex ml-auto mr-auto justify-between en mt-[-50px] z-10 !relative xl:w-[50%] md:mt-[-100px]">
+            <div className="text-2xl">{t("titlebuttonleft")}</div>
+            <div className="text-2xl text-end ">{t("titlebuttonright")}</div>
+          </div>
         </div>
+ 
       </div>
 
-      <div className="unitwrapper spacer-top !flex-nowrap">
+      <div className="unitwrapper spacer-top !flex-nowrap" id="feature-home">
         <h2 className="eyebrow block">{t("feature")}</h2>
         <p className="headline block">{t("revolutary")}</p>
         <div className="section-content text-center">
@@ -114,17 +117,18 @@ function HomeP() {
             {t("low-cost-2")}
           </p>
         </div>
-        <div className="w-[100%] md:w-full overflow-hidden text-center">
+        <div className="largecontenthey overflow-hidden text-center">
           <Image
             src={Image2}
             alt="Vercel Logo"
-            className="max-w-[50%] inline-block md:h-[100vh] w-auto"
+            className="max-w-[50%] inline-block  w-auto"
             priority
           />
+          {/* md:h-[100vh] */}
           <Image
             src={Image3}
             alt="Vercel Logo"
-            className="max-w-[50%] inline-block md:h-[100vh] w-auto"
+            className="max-w-[50%] inline-block w-auto"
             priority
           />
         </div>
@@ -139,8 +143,8 @@ function HomeP() {
         <div className="speakers-container">
           <Image src={Image4} alt="Vercel Logo" className="largepic" priority />
         </div>
-        
-        <p className="headline block pb-7 pt-28"><h2 className="eyebrow block mb-8">{t("preextrasec")}</h2>{t("extra-security")}</p>
+        <div className="" id="security-home"></div>
+        <p className="headline block pb-7 pt-28"><h2 className="eyebrow block mb-8" >{t("preextrasec")}</h2>{t("extra-security")}</p>
 
         <div className="section-content text-center">
           <p className="reduced-headline">
@@ -159,26 +163,30 @@ function HomeP() {
           </p>
         </div>
         <div className="speakers-container">
-          <Image src={Image6} alt="Vercel Logo" className="largepic" priority />
+          <Image src={Image6} alt="Vercel Logo" className="largecotenthey" priority />
         </div>
-        <div className="w-full flex wrap flex-col md:flex-row md:w-[80vw] md:justify-center items-center">
-          <Image
-            src={Image7}
-            alt="Vercel Logo"
-            className="md:h-[100vh] md:w-auto w-[70%] inline-block md:mb-12"
-            priority
-          />
-          <div className="section-content text-center md:!w-[50%] !inline-block">
-            <p className="reduced-headline">{t("lostmode")}</p>
-            <p className="section-body  w-[100%] md:w-[80%] ml-auto mr-auto">
-              {t("extra-security-3")}
-            </p>
+        <div className="largecontenthey">
+          <div className="w-full flex wrap flex-col md:flex-row md:justify-center items-center">
+            
+            <div className="section-content !m-0 text-center md:!w-[50%] !inline-block">
+              <p className="reduced-headline">{t("lostmode")}</p>
+              <p className="section-body   w-[100%] md:w-[80%] ml-auto mr-auto">
+                {t("extra-security-3")}
+              </p>
+            </div>
+            <Image
+              src={Image7}
+              alt="phone lost mode"
+              className=" md:w-auto w-[70%] inline-block md:mb-12"
+              priority
+            /> 
           </div>
         </div>
       </div>
+      <div className="" id="application-home"></div>
       <div className="unitwrapper spacer-top !flex-nowrap !bg-slate-100 !text-slate-950">
         <h2 className="eyebrow block">{t("use-case")}</h2>
-        <p className="headline block pb-10">{t("application")}</p>
+        <p className="headline block pb-10" >{t("application")}</p>
         <div className="flex flex-wrap w-full md:!w-[80%] justify-center">
           <Image src={Image8} alt="Vercel Logo" className="largepic" priority />
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">

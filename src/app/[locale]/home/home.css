@@ -20,6 +20,31 @@
     }
 }
 
+.largecontenthey {
+    display: block;
+    --p-width: 1466px;
+    --p-height: 728px;
+    width: var(--p-width) !important;
+}
+@media screen and (max-width: 1280px) {
+    .largecontenthey {
+        --p-width: 998px;
+        --p-height: 496px;
+    }
+}
+@media screen and (max-width: 1068px) {
+    .largecontenthey {
+        --p-width: 998px;
+        --p-height: 496px;
+    }
+}
+
+@media screen and (max-width: 734px) {
+    .largecontenthey {
+        --p-width: auto;
+        --p-height: 496px;
+    }
+}
 
 
 .section-technology .speakers-container .video-wrapper {

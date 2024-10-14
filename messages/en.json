@@ -37,6 +37,13 @@
     "title": "Not found!"
   },
   "NavPage": {
+      "contact1": "Find US",
+      "contact2": "General Enquiry",
+      "contact3": "Feedback",
+      "contact4": "Request a Test Ride",
+      "contact5": "Explore METER",
+      "contact6": "METER HK Offcial Online Store",
+      "contact7": "Subscribe to our newsletter",
     "logo": "METER",
     "contact": "Contact us",
     "homepage": "Home",
