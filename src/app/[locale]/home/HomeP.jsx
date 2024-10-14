@@ -179,7 +179,7 @@ function HomeP() {
       <div className="unitwrapper spacer-top !flex-nowrap !bg-slate-100 !text-slate-950">
         <h2 className="eyebrow block">{t("use-case")}</h2>
         <p className="headline block pb-10">{t("application")}</p>
-        <div className="flex flex-wrap w-full md:!w-[80%]">
+        <div className="flex flex-wrap w-full md:!w-[80%] justify-center">
           <Image src={Image8} alt="Vercel Logo" className="largepic" priority />
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
           {t("use-case-4-1")}
