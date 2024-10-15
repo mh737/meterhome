@@ -301,3 +301,28 @@
         color: white;
     }
 }
+
+
+.ttbox{
+        margin: 0 auto;
+        display: flex;
+        filter: grayscale(100%);
+        opacity: 0.5;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+    }
+    .ttimage{
+        flex: 1 1 15%; 
+        width: 400px;
+        text-align: center;
+    }
+    .ttbox *{
+        height: 100px;
+        
+    }
+    .ttapple{transform: scale(3);
+        
+    }

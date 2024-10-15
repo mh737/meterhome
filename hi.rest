@@ -1,0 +1,31 @@
+###
+
+GET http://localhost:3000/api/connect 
+###
+POST http://localhost:3000/api/
+content-type: application/x-www-form-urlencoded
+
+query=
+&value=bar
+
+###
+
+
+name=foo
+&email=bar
+###
+
+content-type: application/json
+
+{
+    "user": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+### 
+GET http://localhost:3000
+    ?page=2
+    &pageSize=10
+
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4

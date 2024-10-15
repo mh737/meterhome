@@ -21,6 +21,12 @@ import Image8 from "../../../../public/image/Demo2/8.png";
 import Image9 from "../../../../public/image/Demo2/9.png";
 import Image10 from "../../../../public/image/Demo2/10.jpg";
 
+
+import logo1 from "../../../../public/image/logo/app.svg";
+import logo2 from "../../../../public/image/logo/ms.avif";
+import logo3 from "../../../../public/image/logo/nba.jpg";
+import logo4 from "../../../../public/image/logo/ocp.jpg";
+
 function HomeP() {
   // const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
@@ -247,7 +253,24 @@ function HomeP() {
           </p>
         </div>
       </div>
-      
+      <div className="trustedby">
+        <h2>Trusted by</h2>
+          <div className="ttbox">
+            <div className="ttimage"><Image            src={logo1}            alt="Logo"    className="ttapple"      /></div>
+            <div className="ttimage"><Image            src={logo2}            alt="Logo"                             /></div>
+            <div className="ttimage"><Image            src={logo3}            alt="Logo"                             /></div>
+            <div className="ttimage"><Image            src={logo4}            alt="Logo"                             /></div> 
+            <div className="ttimage"><Image            src={logo1}            alt="Logo"     className="ttapple"     /></div>
+            <div className="ttimage"><Image            src={logo2}            alt="Logo"                             /></div>
+            <div className="ttimage"><Image            src={logo3}            alt="Logo"                             /></div>
+            <div className="ttimage"><Image            src={logo4}            alt="Logo"                             /></div> 
+            <div className="ttimage"><Image            src={logo1}            alt="Logo"   className="ttapple"       /></div>
+            <div className="ttimage"><Image            src={logo2}            alt="Logo"                             /></div>
+            <div className="ttimage"><Image            src={logo3}            alt="Logo"                             /></div>
+            <div className="ttimage"><Image            src={logo4}            alt="Logo"                             /></div>
+
+        </div>
+      </div>
     </>
   );
 }
