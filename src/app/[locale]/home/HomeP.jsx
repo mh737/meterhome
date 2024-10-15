@@ -38,11 +38,23 @@ function HomeP() {
   }, []);
 
   if (!mounted) return <></>;
+  window.$ = window.jQuery = require('jquery');
+  $(document).ready(()=>{
+    $("#myVideo").css("height", document.getElementById('foo').getBoundingClientRect().height +document.getElementById('navbar').getBoundingClientRect().height);
+    // document.getElementById('myVideo').playbackRate = 0.2
+    window.onresize = function() {
+      $("#myVideo").css("height", document.getElementById('foo').getBoundingClientRect().height +document.getElementById('navbar').getBoundingClientRect().height);
+    }
+  })
+    
   return (
     <>
       {/* <script src="/nav.js" async /> */}
-
-      <div className="w-full md:text-center items-center md:wrap md:flex flex-col">
+      <video  autoPlay muted loop preload="auto" playsInline id="myVideo" className="absolute top-0 w-full object-cover">
+        <source src="/city.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+      <div className="w-full md:text-center items-center md:wrap md:flex flex-col bg-black" id="foo">
         <div className="ml-5 !z-10 !relative max-h-[348px]">
           <h1 className=" mb-4 md:mt-32 mt-4">
           <div className="block text-start en">{t("pretitle")}</div>
@@ -53,7 +65,7 @@ function HomeP() {
 
           <Popup
             trigger={
-              <button className="p-2 border-amber-50 border-[1px] bg-black">
+              <button className="p-2 border-amber-50 border-[1px] bg-transparent px-6 rounded-full">
                 {t("titlebutton")}
               </button>
             }
@@ -70,10 +82,7 @@ function HomeP() {
                 <div className="content m-0">
                   <video
                     width="320"
-                    height="240"
-                    controls
-                    preload="true"
-                    autoplay playsinline muted loop
+                    height="240" autoPlay muted loop preload="auto" playsInline 
                   >
                     <source src="/image/Demo2/ani1.MP4" type="video/mp4" />
                     <track

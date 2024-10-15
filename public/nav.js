@@ -8,3 +8,9 @@ var lastScrollTop = 0;
            navbar.style.top = "0";
          lastScrollTop = scrollTop;
        })
+
+      //  <script>
+      $(document).ready(()=>{
+          $("#myVideo").css("height", document.getElementById('foo').getBoundingClientRect().height);
+   
+      })
