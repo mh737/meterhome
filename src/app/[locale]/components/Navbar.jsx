@@ -44,13 +44,13 @@ function Navbar() {
     return (
         <>
             <nav id="navbar">
-                <div className="nav">
-                    <NavLink href="/" className="!p-0 ">
-                        <div className="navleft">
+                <div className="nav !flex justify-between items-center md:!pt-[10px] !pt-0 mx-[5%] my-0">
+                    <NavLink href="/" className="!p-0 flex-1 text-start">
+                        <div className="navleft !flex items-center justify-start flex-nowrap">
 
                             <Image
                                 priority
-                                src="/image/meter.jpg"
+                                src="/image/meter.png"
                                 width={47}
                                 height={47}
                                 alt="METER logo"
@@ -59,7 +59,7 @@ function Navbar() {
 
                         </div>
                     </NavLink>
-                    <div className="navcenter max-md:hidden">
+                    <div className="navcenter justify-center items-center flex-nowrap !hidden md:!flex flex-1 text-center leading-[1.1]">
                         {/* <a href="/plan" className="">Plan</a>
                 <a href="tutorial">tutorial</a>
                 <a href="/support">Supported device</a> */}
@@ -91,12 +91,12 @@ function Navbar() {
                         </div>
                     </div>
                 
-                    <div className=" max-md:hidden">
+                    <div className="navright md:!flex items-center justify-end flex-nowrap !hidden flex-1">
                         <NavLink href={pathname} locale={t("change-lang-locale")} className="en link" >{t("change-lang-text")}</NavLink>
                         {/* <button onClick={changeLang(t("change-lang-locale"))} >{t("change-lang-text")}</button> */}
                         {/* <NavLink href="/" locale="en">EN</NavLink> */}
                     </div>
-                    <div className="flex md:hidden">
+                    <div className="flex md:hidden basis-auto">
                         <button onClick={toggleNavbar}>
                             {!isClick ? (
                                 <Image
@@ -117,7 +117,7 @@ function Navbar() {
                                 ></Image>
                             )}
                              
-                        </button><NavLink href="/contact-us" className="rounded-2xl m-2 p-1 !pl-2 !pr-2 !bg-blue-800 text-white hover:!bg-blue-500 transition-all inline-block">{t("contact")}</NavLink>
+                        </button><NavLink href="/contact-us" className="rounded-2xl m-2 py-1 !px-3 !bg-blue-800 text-white hover:!bg-blue-500 transition-all inline-block">{t("contact")}</NavLink>
                     </div>
                 </div>
                 <div className="md:hidden">

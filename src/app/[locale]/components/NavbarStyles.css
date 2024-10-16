@@ -89,30 +89,12 @@
 @tailwind utilities;
 
 
-.nav{
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 10px;
-    margin: 0 5% 0 5%;
-    @media screen and (max-width: 769px) {
-      margin-top: 0 !important;
-    }
-    
-}
-.navleft{
-  justify-self : flex-start;
-    display: flex !important;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
+
 .nav *{
     display: inline-block;
     color: #fff;
     
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
 }
 .link{
   padding: 7.5px;
@@ -143,7 +125,7 @@
   
   transition: 0.5s;
   width: 100%;
-  background: #000;
+  /* background: #000; */
   z-index: 99 !important;
 }
 

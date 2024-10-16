@@ -49,12 +49,12 @@ function HomeP() {
     
   return (
     <>
-      {/* <script src="/nav.js" async /> */}
+      <script src="/nav.js" async />
       <video  autoPlay muted loop preload="auto" playsInline id="myVideo" className="absolute top-0 w-full object-cover">
         <source src="/city.mp4" type="video/mp4" />
         Your browser does not support the video tag.
     </video>
-      <div className="w-full md:text-center items-center md:wrap md:flex flex-col bg-black" id="foo">
+      <div className="w-full md:text-center items-center md:wrap md:flex flex-col bg-black pb-[70px] mb-[-70px] md:pb-0 md:mb-0" id="foo">
         <div className="ml-5 !z-10 !relative max-h-[348px]">
           <h1 className=" mb-4 md:mt-32 mt-4">
           <div className="block text-start en">{t("pretitle")}</div>
@@ -116,7 +116,7 @@ function HomeP() {
           priority
         />
         <div className="largecontenthey">       
-          <div className="w-[70%] flex ml-auto mr-auto justify-between en mt-[-50px] z-10 !relative xl:w-[50%] md:mt-[-100px]">
+          <div className="w-[70%] flex ml-auto mr-auto justify-between en mt-[-70px] z-10 !relative xl:w-[50%] sm:mt-[-100px] ">
             <div className="text-2xl">{t("titlebuttonleft")}</div>
             <div className="text-2xl text-end ">{t("titlebuttonright")}</div>
           </div>
@@ -133,7 +133,7 @@ function HomeP() {
             {t("low-cost-2")}
           </p>
         </div>
-        <div className="largecontenthey overflow-hidden text-center">
+        <div className=" overflow-hidden text-center">
           <Image
             src={Image2}
             alt="Vercel Logo"
@@ -157,7 +157,7 @@ function HomeP() {
         </div>
 
         <div className="speakers-container">
-          <Image src={Image4} alt="Vercel Logo" className="largepic" priority />
+          <Image src={Image4} alt="bag" className="largepic object-cover" priority />
         </div>
         <div className="" id="security-home"></div>
         <p className="headline block pb-7 pt-28"><h2 className="eyebrow block mb-8" >{t("preextrasec")}</h2>{t("extra-security")}</p>
@@ -204,7 +204,7 @@ function HomeP() {
         <h2 className="eyebrow block">{t("use-case")}</h2>
         <p className="headline block pb-10" >{t("application")}</p>
         <div className="flex flex-wrap w-full md:!w-[80%] justify-center">
-          <Image src={Image8} alt="Vercel Logo" className="largepic" priority />
+          <Image src={Image8} alt="Vercel Logo" className="largepic object-cover" priority />
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
           {t("use-case-4-1")}
             <br />
@@ -222,11 +222,9 @@ function HomeP() {
             </button>
           </p>
 
-          <Image src={Image9} alt="Vercel Logo" className="largepic" priority />
+          <Image src={Image9} alt="Vercel Logo" className="largepic object-cover" priority />
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
-          {t("use-case-1-1")}
-            <br />
-            <br />
+          {t("use-case-1-1")}     <br />    <br />
             <button className="p-3 bg-orange-500 rounded-full font-thin goto">
               {" "}
               <div className="rounded-full border-white border-2 inline-block w-9 text-white">
@@ -239,16 +237,9 @@ function HomeP() {
               </div>
             </button>
           </p>
-          <Image
-            src={Image10}
-            alt="Vercel Logo"
-            className="largepic"
-            priority
-          />
+          <Image   src={Image10}  alt="Vercel Logo"  className="largepic object-cover"   priority  />
           <p className="section-body spacer-bottom w-[100%] md:w-[80%] ml-auto mr-auto text-center">
-          {t("use-case-2-1")}
-             <br />
-            <br />
+          {t("use-case-2-1")}             <br />    <br />
             <button className="p-3 bg-orange-500 rounded-full font-thin goto">
               {" "}
               <div className="rounded-full border-white border-2 inline-block w-9 text-white">
