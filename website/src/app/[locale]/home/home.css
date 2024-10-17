@@ -39,7 +39,7 @@
     }
 }
 
-@media screen and (max-width: 734px) {
+@media screen and (max-width: 768px) {
     .largecontenthey {
         --p-width: auto;
         --p-height: 496px;
