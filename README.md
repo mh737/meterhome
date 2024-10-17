@@ -1,3 +1,3 @@
 build with Next js 
 
-need to implement recapcha
+need to implement recapcha + AESRSA
