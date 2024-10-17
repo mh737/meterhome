@@ -51,7 +51,8 @@ function HomeP() {
     <>
       {/* <script src="/nav.js" async /> */}
       <video  autoPlay muted loop preload="auto" playsInline id="myVideo" className="absolute top-0 w-full object-cover">
-        <source src="/city.mp4" type="video/mp4" />
+        {/* <source src="/city.mp4" type="video/mp4" /> */}
+        <source src="https://cdn.pixabay.com/video/2018/02/19/14385-256955049_large.mp4" type="video/mp4" />
         Your browser does not support the video tag.
     </video>
       <div className="w-full md:text-center items-center md:wrap md:flex flex-col bg-black" id="foo">
