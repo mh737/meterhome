@@ -9,6 +9,6 @@ window.addEventListener("scroll", function () {
   } else {
     //  navbar.style.top = "0";
     navbar.style.backgroundColor = "transparent";
-    console.log(true);
+    // console.log(true);
   }
 });

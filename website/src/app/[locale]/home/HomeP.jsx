@@ -88,12 +88,12 @@ function HomeP() {
                     height="240" autoPlay muted loop preload="auto" playsInline 
                   >
                     <source src="/image/Demo2/ani1.MP4" type="video/mp4" />
-                    <track
+                    {/* <track
                       src="/path/to/captions.vtt"
                       kind="subtitles"
                       srcLang="en"
                       label="English"
-                    />
+                    /> */}
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -140,14 +140,14 @@ function HomeP() {
           <Image
             src={Image2}
             alt="Vercel Logo"
-            className="max-w-[50%] inline-block  w-auto"
+            className="max-w-[45%] inline-block  w-auto"
             priority
           />
           {/* md:h-[100vh] */}
           <Image
             src={Image3}
             alt="Vercel Logo"
-            className="max-w-[50%] inline-block w-auto"
+            className="max-w-[45%] inline-block w-auto"
             priority
           />
         </div>
