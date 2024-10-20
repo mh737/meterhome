@@ -1,5 +1,6 @@
 var lastScrollTop = 0;
 navbar = document.getElementById("navbar");
+
 window.addEventListener("scroll", function () {
   var scrollTop = window.pageYOffset || this.document.documentElement.scrollTop;
   if (scrollTop > lastScrollTop) {

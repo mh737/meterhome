@@ -45,6 +45,8 @@ function HomeP() {
     window.onresize = function() {
       $("#myVideo").css("height", document.getElementById('foo').getBoundingClientRect().height +document.getElementById('navbar').getBoundingClientRect().height);
     }
+    var navbar = document.getElementById("navbar");
+    navbar.style.backgroundColor = "transparent";
   })
     
   return (
