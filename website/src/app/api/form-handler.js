@@ -30,5 +30,5 @@ async function checkTurnstileToken(req, res) {
 }
 
 async function processForm(req, res) {
-    // Continue processing the form
+    console.log(req);
 }

@@ -147,7 +147,8 @@ const initialFormData = {
 
         </div>
         <Turnstile
-                sitekey={process.env.TURNSTILE_SITE_KEY}
+                appearance="always"
+                sitekey="0x4AAAAAAAx76H-rAXp2qBZd"
                 onVerify={(token) => setValue('token', token)}
             />
         <div className="form-field col x-100 align-center mt-6 mb-4">
