@@ -72,7 +72,6 @@ function Contact() {
   return (
     // <div className="App">
     <>
-      <script src="/nav.js" async />
       <Navbar></Navbar>
       <main className="bg-gray-200 h-[100vh] w-full">
         <h1 className="text-4xl text-center w-full pt-32 text-black">{t("title")}</h1>
