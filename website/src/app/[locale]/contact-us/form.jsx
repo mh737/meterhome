@@ -21,7 +21,7 @@ const initialFormData = {
   //   message: "",
   // }
 
-  export const Form: React.FC<{}> = () => {
+  export const Form = () => { //: React.FC<{}>
     const t = useTranslations("ContactPage");
 
     const [formData1, setFormData] = useState(initialFormData);
