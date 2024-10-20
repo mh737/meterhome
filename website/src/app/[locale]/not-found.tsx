@@ -82,7 +82,8 @@ export default function NotFoundPage() {
           return response.json();
         })
         .then(data => {
-          location.replace(data.title)
+          console.log(data.title);
+          // location.replace(data.title)
           // Logging the titles of the issues
         })
         .catch(error => {
