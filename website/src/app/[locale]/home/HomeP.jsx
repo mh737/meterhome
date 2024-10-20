@@ -49,6 +49,7 @@ function HomeP() {
     
   return (
     <>
+      <script src="/nav.js" async />
       <video  autoPlay muted loop preload="auto" playsInline id="myVideo" className="absolute top-0 w-full object-cover">
         {/* <source src="/city.mp4" type="video/mp4" /> */}
         <source src="https://cdn.pixabay.com/video/2018/02/19/14385-256955049_large.mp4" type="video/mp4" />

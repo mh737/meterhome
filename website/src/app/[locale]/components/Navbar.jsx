@@ -42,7 +42,6 @@ function Navbar() {
   // console.log(pathname)
   return (
     <>
-      <script src="/nav.js" async />
       <nav id="navbar">
         <div className="nav !flex justify-between items-center md:!pt-[10px] !pt-0 mx-[5%] my-0">
           <NavLink href="/" className="!p-0 flex-1 text-start">
