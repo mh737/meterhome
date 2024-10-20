@@ -75,7 +75,7 @@ export default function NotFoundPage() {
         console.log(GITHUB_ISSUES_LINK + issueNumber);
         fetch(GITHUB_ISSUES_LINK + issueNumber).then(response => {
           if (!response.ok) {
-            // location.replace(homepage);
+            location.replace(homepage);
             console.error('Network response was not ok.');
             
           }
@@ -83,12 +83,12 @@ export default function NotFoundPage() {
         })
         .then(data => {
           console.log(data.title);
-          // location.replace(data.title)
+          location.replace(data.title)
           // Logging the titles of the issues
         })
         .catch(error => {
           console.error('Error fetching data:', error);
-          // location.replace(homepage);
+          location.replace(homepage);
         });
         // location.replace(GITHUB_ISSUES_LINK + issueNumber);
         // xhr.open("GET", GITHUB_ISSUES_LINK + issueNumber);
