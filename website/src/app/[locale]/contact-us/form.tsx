@@ -1,87 +1,59 @@
 "use client";
 
+// import Handler1 from "@/app/api/formhandle"
+import Turnstile from "react-turnstile";
 import { useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
 import React, {useEffect, useReducer, useState} from "react";
-import Script from "next/script";
-import { subscribeToNewsletter } from "../action";
 
-  export type FormState = {
-    success: boolean;
-    error: boolean;
-    message: string;
-  }
+const initialFormData = {
+  fullName: '',
+  token: ''
+}
+  // export type FormState = {
+  //   success: boolean;
+  //   error: boolean;
+  //   message: string;
+  // }
 
-  const initialState: FormState = {
-    success: false,
-    error: false,
-    message: "",
-  }
-  
-  // const useFormState = (action: (data: any) => Promise<any>, initialState: FormState) => {
-  //   const [state, dispatch] = useReducer((state: FormState, action: any) => {
-  //     switch (action.type) {
-  //       case 'SUCCESS':
-  //         return { ...state, success: true, error: false, message: action.message };
-  //       case 'ERROR':
-  //         return { ...state, success: false, error: true, message: action.message };
-  //       default:
-  //         return state;
-  //     }
-  //   }, initialState);
-
-  //   const formAction = async (event: React.FormEvent<HTMLFormElement>) => {
-  //     event.preventDefault();
-  //     const formData = new FormData(event.currentTarget);
-  //     try {
-  //       const response = await action(Object.fromEntries(formData.entries()));
-  //       dispatch({ type: 'SUCCESS', message: response.message });
-  //     } catch (error: any) {
-  //       dispatch({ type: 'ERROR', message: error.message });
-  //     }
-  //   };
-
-  //   return [state, formAction] as const;
-  // };
-
-  declare global {
-    interface Window {
-      turnstile: any;
-    }
-  }
+  // const initialState: FormState = {
+  //   success: false,
+  //   error: false,
+  //   message: "",
+  // }
 
   export const Form: React.FC<{}> = () => {
-    const [state, formAction] = useState(    initialState );
-
-
-    const formAction1 = async (event: React.FormEvent<HTMLFormElement>) => {
-      // console.log(event)
-      // event.preventDefault();
-      const ne1 = new FormData(event.currentTarget);
-      console.log(ne1)
-      formAction(await subscribeToNewsletter(initialState, ne1));
-    }
-  
-  
-      const pathname = usePathname();
-  
-      useEffect(() => {
-          const turnstileContainers =
-              document.querySelectorAll(".cf-turnstile");
-  
-          turnstileContainers.forEach((turnstileContainer) => {
-              turnstileContainer.innerHTML = "";
-              if (window && window.turnstile) {
-                  window.turnstile.render(turnstileContainer, {
-                      sitekey:
-                          process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY,
-                      callback: "javascriptCallback",
-                  });
-              }
-          });
-      }, [pathname]);
-
     const t = useTranslations("ContactPage");
+
+    const [formData1, setFormData] = useState(initialFormData);
+
+    const setValue = (k, v) => {
+        setFormData((oldData) => (
+            {
+                ...oldData,
+                [k]: v
+            }
+        ))
+    }
+
+    const handleSubmit = async () => {
+        const endpoint = "/api/form-handler";
+        const submitData = new FormData();
+        for (const k in formData1) {
+            submitData.append(k, formData1[k]);
+        }
+        try {
+            const result = await fetch(endpoint, {
+                body: submitData,
+                method: 'post'
+            });
+
+            const outcome = await result.json();
+            console.log(outcome);
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
 
     // useEffect(() => {
     //     const inputs = document.querySelectorAll('.input-text');
@@ -113,33 +85,32 @@ import { subscribeToNewsletter } from "../action";
   
 
     //final working ver
-    // useEffect(() => {
-    //   const inputs = document.querySelectorAll(".input-text");
-    //   const handleKeyUp = function () {
-    //     if (this.value.trim() !== "") {
-    //       this.classList.add("not-empty");
-    //     } else {
-    //       this.classList.remove("not-empty");
-    //     }
-    //   };
-    //   inputs.forEach((input) => {
-    //     input.addEventListener("keyup", handleKeyUp);
-    //   });
-    //   // Cleanup function
-    //   return () => {
-    //     inputs.forEach((input) => {
-    //       input.removeEventListener("keyup", handleKeyUp);
-    //     });
-    //   };
-    // }, []);
+    useEffect(() => {
+      const inputs = document.querySelectorAll(".input-text");
+      const handleKeyUp = function () {
+        if (this.value.trim() !== "") {
+          this.classList.add("not-empty");
+        } else {
+          this.classList.remove("not-empty");
+        }
+      };
+      inputs.forEach((input) => {
+        input.addEventListener("keyup", handleKeyUp);
+      });
+      // Cleanup function
+      return () => {
+        inputs.forEach((input) => {
+          input.removeEventListener("keyup", handleKeyUp);
+        });
+      };
+    }, []);
 
     
 
     return (
       <form
         className="contact-form row w-full md:w-[70%]"
-        action={formAction1}
-        method="POST"
+        // action={formAction1}        method="POST"
       >
         <div className="form-field col x-50">
           <input
@@ -175,31 +146,18 @@ import { subscribeToNewsletter } from "../action";
           ></textarea>
 
         </div>
-          <Script
-          src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onloadTurnstileCallback"
-          async
-          defer
-      ></Script>
-        <div className="block flex-row">
-          <div
-            className="cf-turnstile"
-            data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
-            data-callback="javascriptCallback"
-            data-size="flexible"
-          ></div>
-        </div>
+        <Turnstile
+                sitekey={process.env.TURNSTILE_SITE_KEY}
+                onVerify={(token) => setValue('token', token)}
+            />
         <div className="form-field col x-100 align-center mt-6 mb-4">
-          <input
+          <button
             className="submit-btn prevent-select"
             type="submit"
+            onClick={handleSubmit}
             value={t("submit")}
           />
         </div>
-        {state.success === true && (
-                <div>Success! Thanks for your response</div>
-            )}
-            {state.error === true && <div>{state.message}</div>}
-
       </form>
     )
   };
