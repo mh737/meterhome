@@ -154,10 +154,9 @@ const initialFormData = {
         <div className="form-field col x-100 align-center mt-6 mb-4">
           <button
             className="submit-btn prevent-select"
-            type="submit"
+            // type="submit"
             onClick={handleSubmit}
-            value={t("submit")}
-          />
+          >{t("submit")}</button>
         </div>
       </form>
     )
