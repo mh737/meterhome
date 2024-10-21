@@ -1,164 +1,136 @@
 "use client";
 
-// import Handler1 from "@/app/api/formhandle"
 import Turnstile from "react-turnstile";
 import { useTranslations } from "next-intl";
-import React, {useEffect, useReducer, useState} from "react";
+import React, { useEffect, useState } from "react";
 
 const initialFormData = {
-  fullName: '',
+  name: '',
+  email: '',
+  message: '',
   token: ''
-}
-  // export type FormState = {
-  //   success: boolean;
-  //   error: boolean;
-  //   message: string;
-  // }
+};
 
-  // const initialState: FormState = {
-  //   success: false,
-  //   error: false,
-  //   message: "",
-  // }
+export const Form = () => {
+  const t = useTranslations("ContactPage");
+  const [formData1, setFormData] = useState(initialFormData);
 
-  export const Form = () => { //: React.FC<{}>
-    const t = useTranslations("ContactPage");
+  const setValue = (k, v) => {
+    setFormData((oldData) => ({ ...oldData, [k]: v  }));
+    // console.log(k, v);
+    // console.log(formData1);
+  };
+  
 
-    const [formData1, setFormData] = useState(initialFormData);
-
-    const setValue = (k, v) => {
-        setFormData((oldData) => (
-            {
-                ...oldData,
-                [k]: v
-            }
-        ))
+  const handleSubmit = async () => {
+    console.log(token);
+    const endpoint = "/api/form-handler";
+    setFormData((oldData) => ({ ...oldData, ["token"]: $("input[name='cf-turnstile-response']").val()  }));
+    const submitData = new FormData();
+    for (const k in formData1) {
+      submitData.append(k, formData1[k]);
     }
-
-    const handleSubmit = async () => {
-        const endpoint = "/api/form-handler";
-        const submitData = new FormData();
-        for (const k in formData1) {
-            submitData.append(k, formData1[k]);
-        }
-        try {
-            const result = await fetch(endpoint, {
-                body: submitData,
-                method: 'post'
-            });
-
-            const outcome = await result.json();
-            console.log(outcome);
-        } catch (err) {
-            console.error(err);
-        }
-    }
-
-
-    // useEffect(() => {
-    //     const inputs = document.querySelectorAll('.input-text');
-  
-    //     inputs.forEach(input => {
-    //         input.addEventListener('keyup', function() {
-    //             const label = this.nextElementSibling;
-    //             if (this.value.trim() !== '') {
-    //                 label.classList.add('not-empty');
-    //             } else {
-    //                 label.classList.remove('not-empty');
-    //             }
-    //         });
-    //     });
-  
-    //     return () => {
-    //         inputs.forEach(input => {
-    //             input.removeEventListener('keyup', function() {
-    //                 const label = this.nextElementSibling;
-    //                 if (this.value.trim() !== '') {
-    //                     label.classList.add('not-empty');
-    //                 } else {
-    //                     label.classList.remove('not-empty');
-    //                 }
-    //             });
-    //         });
-    //     };
-    // }, []);
-  
-
-    //final working ver
-    useEffect(() => {
-      const inputs = document.querySelectorAll(".input-text");
-      const handleKeyUp = function () {
-        if (this.value.trim() !== "") {
-          this.classList.add("not-empty");
-        } else {
-          this.classList.remove("not-empty");
-        }
-      };
-      inputs.forEach((input) => {
-        input.addEventListener("keyup", handleKeyUp);
+    try {
+      const result = await fetch(endpoint, {
+        body: submitData,
+        method: 'post'
       });
-      // Cleanup function
-      return () => {
-        inputs.forEach((input) => {
-          input.removeEventListener("keyup", handleKeyUp);
-        });
-      };
-    }, []);
 
-    
-
-    return (
-      <form
-        className="contact-form row w-full md:w-[70%]"
-        // action={formAction1}        method="POST"
-      >
-        <div className="form-field col x-50">
-          <input
-            name="name"
-            className="input-text js-input"
-            type="text"
-            required
-          />
-          <label className="label prevent-select" htmlFor="name">
-            {t("name")}
-          </label>
-        </div>
-        <div className="form-field col x-50">
-          <input
-            name="email"
-            className="input-text js-input"
-            type="email"
-            required
-          />
-          <label className="label prevent-select" htmlFor="email">
-            {t("email")}
-          </label>
-          <label className="label !-bottom-10 prevent-select" htmlFor="message">
-            {t("message")}
-          </label>
-        </div>
-        <div className="form-field col x-100">
-          {/* <input name="message" className="input-text js-input text-wrap whitespace-normal" type="text" required /> */}
-          <textarea
-            name="message"
-            className="input-text !h-[100px]"
-            required
-          ></textarea>
-
-        </div>
-        <Turnstile
-                appearance="always"
-                sitekey="0x4AAAAAAAx76H-rAXp2qBZd"
-                onVerify={(token) => setValue('token', token)}
-            />
-        <div className="form-field col x-100 align-center mt-6 mb-4">
-          <button
-            className="submit-btn prevent-select"
-            // type="submit"
-            onClick={handleSubmit}
-          >{t("submit")}</button>
-        </div>
-      </form>
-    )
+      const outcome = await result.json();
+      console.log(outcome);
+      $("#status").html(outcome.message);
+    } catch (err) {
+      console.error(err);
+      $("#status").html("It's seems like you are offline. Please check your internet connection.");
+    }
   };
 
+  window.$ = window.jQuery = require('jquery');
+  $(document).ready(()=>{
+    var form = document.getElementById("myForm");
+    function handleForm(event) { event.preventDefault(); handleSubmit(); } 
+    form.addEventListener('submit', handleForm);
+
+
+  })
+
+
+
+  useEffect(() => {
+    const inputs = document.querySelectorAll(".input-text");
+    const handleKeyUp = function () {
+      if (this.value.trim() !== "") {
+        this.classList.add("not-empty");
+      } else {
+        this.classList.remove("not-empty");
+      }
+    };
+    inputs.forEach((input) => {
+      input.addEventListener("keyup", handleKeyUp);
+    });
+
+    // Cleanup function
+    return () => {
+      inputs.forEach((input) => {
+        input.removeEventListener("keyup", handleKeyUp);
+      });
+    };
+  }, []);
+
+  return (
+    <form
+      className="contact-form row w-full md:w-[70%]"
+      id="myForm"
+    >
+      <div className="form-field col x-50">
+        <input
+          name="name"
+          className="input-text js-input"
+          type="text"
+          required
+          onChange={(e) => setValue('name', e.target.value)}
+        />
+        <label className="label prevent-select" htmlFor="name">
+          {t("name")}
+        </label>
+      </div>
+      <div className="form-field col x-50">
+        <input
+          name="email"
+          className="input-text js-input"
+          type="email"
+          required
+          onChange={(e) => setValue('email', e.target.value)}
+        />
+        <label className="label prevent-select" htmlFor="email">
+          {t("email")}
+        </label>
+      </div>
+      <div className="form-field col x-100">
+        <textarea
+          name="message"
+          className="input-text !h-[100px]"
+          required
+          onChange={(e) => setValue('message', e.target.value)}
+        ></textarea>
+        <label className="label !bottom-10 prevent-select" htmlFor="message">
+          {t("message")}
+        </label>
+      </div>
+
+      <Turnstile
+        appearance="always"
+        sitekey="0x4AAAAAAAx76H-rAXp2qBZd"
+        onVerify={(token) => setValue('token', token)}
+      />
+      <div className="form-field col x-100 align-center mt-6 mb-4">
+        <button
+          className="submit-btn prevent-select"
+          type="submit" >
+          {t("submit")}
+        </button>
+        <br /><br /><pre id="status"> </pre>
+      </div>
+    </form>
+  );
+};
