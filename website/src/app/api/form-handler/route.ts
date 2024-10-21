@@ -18,7 +18,11 @@ async function checkTurnstileToken(req : Request, { params }: any) {
     const token =  name; //req.body.token 
 
     const formData = new FormData();
-    formData.append('secret', process.env.TURNSTILE_SECRET_KEY?? "");
+    const secretKey = process.env.TURNSTILE_SECRET_KEY;
+    if (!secretKey) {
+        return Response.json({ message: `${secretKey} is not defined`});
+    }
+    formData.append('secret', secretKey);
     formData.append('response', token);
 
     try {
