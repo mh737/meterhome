@@ -18,7 +18,7 @@ export const Form = () => {
   const setValue = (k, v) => {
     setFormData((oldData) => ({ ...oldData, [k]: v  }));
     // console.log(k, v);
-    // console.log(formData1);
+    console.log(formData1);
   };
   
 
