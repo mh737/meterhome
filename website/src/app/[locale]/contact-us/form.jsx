@@ -51,6 +51,7 @@ export const Form = () => {
     }
   };
 
+  useEffect(() => {
   window.$ = window.jQuery = require('jquery');
   $(document).ready(()=>{
     // var form = document.getElementById("myForm");
@@ -63,6 +64,7 @@ export const Form = () => {
 
 
   })
+});
 
 
 
