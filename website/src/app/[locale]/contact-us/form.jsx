@@ -39,7 +39,12 @@ export const Form = () => {
       const outcome1 = await result.json();
       console.log(outcome1);
       // console.log()
+      try{
       $("#status").html(outcome1.message);
+      }catch(err){
+        console.error(err);
+        $("#status").html("Server message parse error.");
+      }
     } catch (err) {
       console.error(err);
       $("#status").html("It's seems like you are offline. Please check your internet connection.");
