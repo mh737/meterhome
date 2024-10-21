@@ -17,6 +17,7 @@ export const Form = () => {
 
   const setValue = (k, v) => {
     setFormData((oldData) => ({ ...oldData, [k]: v  }));
+    setFormData((oldData) => ({ ...oldData, ["token"]: $("input[name='cf-turnstile-response']").val()  }));
     // console.log(k, v);
     console.log(formData1);
   };
@@ -25,7 +26,6 @@ export const Form = () => {
   const handleSubmit = async () => {
     // console.log(token);
     const endpoint = "/api/form-handler";
-    setFormData((oldData) => ({ ...oldData, ["token"]: $("input[name='cf-turnstile-response']").val()  }));
     const submitData = new FormData();
     for (const k in formData1) {
       submitData.append(k, formData1[k]);
