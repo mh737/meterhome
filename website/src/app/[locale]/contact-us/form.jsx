@@ -47,9 +47,13 @@ export const Form = () => {
 
   window.$ = window.jQuery = require('jquery');
   $(document).ready(()=>{
-    var form = document.getElementById("myForm");
+    // var form = document.getElementById("myForm");
     function handleForm(event) { event.preventDefault(); handleSubmit(); } 
-    form.addEventListener('submit', handleForm);
+    
+    // form.addEventListener('submit', handleForm);
+   $("#myForm").on('submit', function(e){
+      handleForm(e);
+  })
 
 
   })
