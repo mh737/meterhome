@@ -5,10 +5,10 @@ import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 
 const initialFormData = {
-  name: '',
-  email: '',
-  message: '',
-  token: ''
+  name: "",
+  email: "",
+  message: "",
+  token: "",
 };
 
 export const Form = () => {
@@ -16,12 +16,14 @@ export const Form = () => {
   const [formData1, setFormData] = useState(initialFormData);
 
   const setValue = (k, v) => {
-    setFormData((oldData) => ({ ...oldData, [k]: v  }));
-    setFormData((oldData) => ({ ...oldData, ["token"]: $("input[name='cf-turnstile-response']").val()  }));
+    setFormData((oldData) => ({ ...oldData, [k]: v }));
+    setFormData((oldData) => ({
+      ...oldData,
+      ["token"]: $("input[name='cf-turnstile-response']").val(),
+    }));
     // console.log(k, v);
     console.log(formData1);
   };
-  
 
   const handleSubmit = async () => {
     // console.log(token);
@@ -33,40 +35,40 @@ export const Form = () => {
     try {
       const result = await fetch(endpoint, {
         body: submitData,
-        method: 'post'
+        method: "post",
       });
 
       const outcome1 = await result.json();
       console.log(outcome1);
       // console.log()
-      try{
-      $("#status").html(outcome1.message);
-      }catch(err){
+      try {
+        $("#status").html(outcome1.message);
+      } catch (err) {
         console.error(err);
         $("#status").html("Server message parse error.");
       }
     } catch (err) {
       console.error(err);
-      $("#status").html("It's seems like you are offline. Please check your internet connection.");
+      $("#status").html(
+        "It's seems like you are offline. Please check your internet connection."
+      );
     }
   };
 
   useEffect(() => {
-  window.$ = window.jQuery = require('jquery');
-  $(document).ready(()=>{
-    // var form = document.getElementById("myForm");
-    function handleForm(event) { event.preventDefault(); handleSubmit(); } 
-    
-    // form.addEventListener('submit', handleForm);
-   $("#myForm").on('submit', function(e){
-      handleForm(e);
-  })
-
-
-  })
-});
-
-
+    window.$ = window.jQuery = require("jquery");
+    $(document).ready(() => {
+      // var form = document.getElementById("myForm");
+      function handleForm(event) {
+        event.preventDefault();
+        handleSubmit();
+      }
+      // form.addEventListener('submit', handleForm);
+      $(".submit-btn").click( (e)=> {
+        handleForm(e);
+      });
+    });
+  });
 
   useEffect(() => {
     const inputs = document.querySelectorAll(".input-text");
@@ -90,17 +92,14 @@ export const Form = () => {
   }, []);
 
   return (
-    <form
-      className="contact-form row w-full md:w-[70%]"
-      id="myForm"
-    >
+    <form className="contact-form row w-full md:w-[70%]" id="myForm">
       <div className="form-field col x-50">
         <input
           name="name"
           className="input-text js-input"
           type="text"
           required
-          onChange={(e) => setValue('name', e.target.value)}
+          onChange={(e) => setValue("name", e.target.value)}
         />
         <label className="label prevent-select" htmlFor="name">
           {t("name")}
@@ -112,7 +111,7 @@ export const Form = () => {
           className="input-text js-input"
           type="email"
           required
-          onChange={(e) => setValue('email', e.target.value)}
+          onChange={(e) => setValue("email", e.target.value)}
         />
         <label className="label prevent-select" htmlFor="email">
           {t("email")}
@@ -123,7 +122,7 @@ export const Form = () => {
           name="message"
           className="input-text !h-[100px]"
           required
-          onChange={(e) => setValue('message', e.target.value)}
+          onChange={(e) => setValue("message", e.target.value)}
         ></textarea>
         <label className="label !bottom-10 prevent-select" htmlFor="message">
           {t("message")}
@@ -133,15 +132,15 @@ export const Form = () => {
       <Turnstile
         appearance="always"
         sitekey="0x4AAAAAAAx76H-rAXp2qBZd"
-        onVerify={(token) => setValue('token', token)}
+        onVerify={(token) => setValue("token", token)}
       />
       <div className="form-field col x-100 align-center mt-6 mb-4">
-        <button
-          className="submit-btn prevent-select"
-          type="submit" >
+        <button className="submit-btn prevent-select" >
           {t("submit")}
         </button>
-        <br /><br /><pre id="status"> </pre>
+        <br />
+        <br />
+        <pre id="status"> </pre>
       </div>
     </form>
   );
