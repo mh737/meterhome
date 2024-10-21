@@ -23,7 +23,7 @@ export const Form = () => {
   
 
   const handleSubmit = async () => {
-    console.log(token);
+    // console.log(token);
     const endpoint = "/api/form-handler";
     setFormData((oldData) => ({ ...oldData, ["token"]: $("input[name='cf-turnstile-response']").val()  }));
     const submitData = new FormData();
