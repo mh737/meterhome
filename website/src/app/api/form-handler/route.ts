@@ -27,8 +27,9 @@ async function checkTurnstileToken(req : Request, { params }: any) {
             method: 'POST',
         });
 
-        const outcome = await result.json();
-        if (outcome.success) {
+        const outcome1 = await result.json();
+        return outcome1;
+        if (outcome1.success) {
             return processForm(req);
         }
     } catch (err) { console.error(err); }

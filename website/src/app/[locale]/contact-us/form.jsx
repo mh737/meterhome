@@ -36,9 +36,10 @@ export const Form = () => {
         method: 'post'
       });
 
-      const outcome = await result.json();
-      console.log(outcome);
-      $("#status").html(outcome.message);
+      const outcome1 = await result.json();
+      console.log(outcome1);
+      // console.log()
+      $("#status").html(outcome1.message);
     } catch (err) {
       console.error(err);
       $("#status").html("It's seems like you are offline. Please check your internet connection.");
