@@ -30,7 +30,7 @@ async function checkTurnstileToken(req : Request, { params }: any) {
             body: formData,
             method: 'POST',
         });
-return result;
+// return result;
         const outcome1 = await result.json();
         
         if (outcome1.success) {
